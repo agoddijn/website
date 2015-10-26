@@ -15,15 +15,22 @@
     <base href="/">
 
     <!-- JS and angular -->
-    <script type="text/javascript" src="../scripts/angular.min.js"></script>
-    <script type="text/javascript" src="../scripts/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
     <script type="text/javascript" src="../scripts/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
     <script type="text/javascript" src="../js/routes.js"></script>
+    <script type="text/javascript" src="../js/controllers/about-controller.js"></script>
+    <script type="text/javascript" src="../js/controllers/blog-controller.js"></script>
+    <script type="text/javascript" src="../js/services/job-service.js"></script>
+    <script type="text/javascript" src="../js/controllers/job-controller.js"></script>
+    <script type="text/javascript" src="../js/services/project-service.js"></script>
+    <script type="text/javascript" src="../js/controllers/project-controller.js"></script>
 
     <!-- CSS and stylesheets -->
-    <link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 
   </head>
@@ -43,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Alex Goddijn</a>
+          <a class="navbar-brand" href="/" id="site-name"> <img src="../content/images/logos/website-brand.png" id="brand"> Alex Goddijn</a>
         </div>
 
         <!-- Nav links -->
@@ -52,7 +59,7 @@
             <li class="hidden">
               <a href="/"></a>
             </li>
-            <li ng-repeat="navItem in main.navItems" class="navbar-link">
+            <li ng-repeat="navItem in main.navItems" class="navbar-link" ng-class="main.isActive(navItem)">
               <a href="{{navItem.url}}">{{navItem.name}}</a>
             </li>
           </ul>
@@ -62,14 +69,34 @@
 
     </nav>
 
-    <!-- Injected views -->
+    <!-- Main content -->
     <main class="main-content">
 
-      <div class="col-md-4 profile">
-        <p>Some text</p>
-      </div>
+      <!-- Profile -->
+      <section class="col-md-3 profile">
 
-      <div class="col-md-8 injected" ng-view></div>
+        <!-- Avatar -->
+        <div class="avatar">
+          <a href="/">
+            <img src="../content/images/profile.png">
+          </a>
+        </div>
+
+        <!-- Profile Icons -->
+        <div class="profile-icons">
+          <ul>
+            <li ng-repeat="link in main.linkIcons">
+              <a target="_blank" href="{{link.link}}">
+                <i class="{{link.icon}}"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- Injected views -->
+      <section class="col-md-9 injected" ng-view></section>
 
     </main>
 

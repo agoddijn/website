@@ -19,6 +19,12 @@ angular.module('routes', ['ngRoute'])
       templateUrl : '/views/pages/blogs.html',
       controller : 'BlogController',
       controllerAs : 'blogs'
+    })
+
+    .when('/', {
+      templateUrl : '/views/pages/about.html',
+      controller : 'AboutController',
+      controllerAs : 'about'
     });
 
   $locationProvider.html5Mode(true);

@@ -1,3 +1,7 @@
-<div class="jumbotron">
-  {{jobs.message}}
+<div>
+  <div class="row">
+    <div class="col-md-4" ng-repeat="job in jobs.jobList" ng-click="jobs.open(job)">
+      <h1>{{job.name}}</h1>
+    </div>
+  </div>
 </div>
