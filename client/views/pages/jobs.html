@@ -1,7 +1,17 @@
 <div>
-  <div class="row">
-    <div class="col-md-4" ng-repeat="job in jobs.jobList" ng-click="jobs.open(job)">
-      <h1>{{job.name}}</h1>
+  <div class="col-md-4" ng-repeat="job in jobs.jobList" id="tile">
+    <div ng-click="jobs.open(job)" id="tile-inner">
+      <div class="cover">
+        <div class="cover-content">
+          <i class="fa fa-plus fa-3x"></i>
+        </div>
+      </div>
+      <div class="title">
+        <h1>{{job.name}}</h1>
+      </div>
+      <div class="logo">
+        <img src="{{job.logo}}">
+      </div>
     </div>
   </div>
 </div>

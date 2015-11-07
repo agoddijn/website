@@ -1,9 +1,9 @@
 app.service('ProjectData', function() {
   var halp = {
     title: "H.A.L.P",
-    icon: "",
+    icon: "/content/images/logos/HALP.png",
     descriptionLong: "Long Halp description",
-    descriptionShort: "Short Halp description",
+    descriptionShort: "Robot designed and built from scratch for a competition",
     additional: [
       {
         type: "youtube",
@@ -14,9 +14,9 @@ app.service('ProjectData', function() {
 
   var website = {
     title: "Website",
-    icon: "",
+    icon: "/content/images/logos/website-brand.png",
     descriptionLong: "Long website description",
-    descriptionShort: "Short website description",
+    descriptionShort: "Portfolio website designed from scratch using MEAN stack technology",
     additional: [
       {
         type: "github",

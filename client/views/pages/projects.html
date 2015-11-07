@@ -1,8 +1,20 @@
 <div>
   <div class="row">
-    <div class="col-md-3" ng-repeat="project in projects.projectList" ng-click="projects.open(project)" id="project-square">
-      <h1>{{project.title}}</h1>
-      <p>{{project.descriptionShort}}</p>
+    <div class="col-md-4" ng-repeat="project in projects.projectList" id="tile">
+      <img src="">
+      <div ng-click="projects.open(project)" id="tile-inner">
+        <div class="cover">
+          <div class="cover-content">
+            <i class="fa fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <div class="logo icon">
+          <img src="{{project.icon}}">
+        </div>
+        <div class="descriptionShort">
+          <p>{{project.descriptionShort}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

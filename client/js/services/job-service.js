@@ -1,7 +1,7 @@
 app.service('JobData', function() {
   var tomtom = {
     name: "TomTom",
-    logo: "",
+    logo: "/content/images/logos/TomTom.png",
     positions: [
       {
         name: "Software Engineer",
@@ -23,7 +23,7 @@ app.service('JobData', function() {
 
   var axiomzen = {
     name: "AxiomZen",
-    logo: "",
+    logo: "/content/images/logos/AxiomZen.png",
     positions: [
       {
         name: "Software Engineer",

@@ -20,6 +20,8 @@
     <script type="text/javascript" src="../scripts/ui-bootstrap.min.js"></script>
     <script type="text/javascript" src="../scripts/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/services/about-service.js"></script>
+    <script type="text/javascript" src="../js/controllers/main-controller.js"></script>
     <script type="text/javascript" src="../js/routes.js"></script>
     <script type="text/javascript" src="../js/controllers/about-controller.js"></script>
     <script type="text/javascript" src="../js/controllers/blog-controller.js"></script>
@@ -32,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 
   </head>
 
@@ -91,6 +94,11 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <!-- Short description -->
+        <div class="profile-description">
+          <p>{{main.shortAbout}}</p>
         </div>
 
       </section>

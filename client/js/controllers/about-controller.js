@@ -1,6 +1,6 @@
 //For About
 //About controller
-app.controller('AboutController', [function() {
+app.controller('AboutController', ['AboutData', function(AboutData) {
   var vm = this;
-  vm.message = "Here is a little something about Alex"
+  vm.longAbout = AboutData.l;
 }]);
