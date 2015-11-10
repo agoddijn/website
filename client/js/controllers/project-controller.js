@@ -30,5 +30,8 @@ app.controller('ProjectModalController', ['$modalInstance', 'selected', function
   vm.project = selected;
   vm.interval = 5000; //ms
   vm.noWrapSlide = false;
+  vm.close = function() {
+    $modalInstance.dismiss('cancel');
+  };
 
 }]);

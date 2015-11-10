@@ -1,5 +1,9 @@
 <div class="modal-header">
-  <h3 class="modal-title">{{modalCtrl.project.title}}</h3>
+  <h3 class="modal-title">
+    {{modalCtrl.project.title}}
+    <div class="modal-icon"><img src="{{modalCtrl.project.icon}}"></div>
+    <button type="button" class="close" id="modal-close" ng-click="modalCtrl.close()" aria-label="Close"><i class="fa fa-times fa-4"></i></button>
+  </h3>
 </div>
 <div class="modal-body">
   <div class="description">

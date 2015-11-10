@@ -1,9 +1,27 @@
 <div class="modal-header">
-  <h3 class="modal-title">{{modalCtrl.job.name}}</h3>
+  <h3 class="modal-title">
+    {{modalCtrl.job.name}}
+    <div class="modal-icon"><img src="{{modalCtrl.job.logo}}"></div>
+    <button type="button" class="close" id="modal-close" ng-click="modalCtrl.close()" aria-label="Close"><i class="fa fa-times fa-4"></i></button>
+  </h3>
 </div>
 <div class="modal-body">
   <div ng-repeat="position in modalCtrl.job.positions">
     <h2>{{position.name}}</h2>
-    <p>{{position.description}}</p>
+    <p class="content-description">{{position.descriptionAbove}}</p>
+    <!-- Carousel -->
+    <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide">
+      <uib-slide class="carousel-slide" ng-repeat="content in position.additional" active="content.active">
+        <img class="carousel-image" src="{{content.content}}" ng-show="content.type == 'image'">
+        <pre class="prettyprint" pretty-print ng-show="content.type == 'code'">
+          {{content.type}}
+        </pre>
+      </uib-slide>
+    </uib-carousel>
+    <div class="caption" ng-repeat="content in position.additional" ng-show="content.active && content.caption != null">
+      <p>{{content.caption}}</p>
+    </div>
+    <!-- End Carousel -->
+    <p class="content-description">{{position.descriptionBelow}} <a href="{{position.github}}" class="github-link" target="_blank" ng-show="position.github != null">View on Github</a></p>
   </div>
 </div>

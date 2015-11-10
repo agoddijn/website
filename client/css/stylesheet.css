@@ -7,28 +7,48 @@ body {
 }
 
 #brand {
-  height: 30px;
-  width: 30px;
+  height: 40px;
   display: inline;
   margin-top: -5px;
+}
+
+.navbar-brand {
+  padding: 10px 10px 10px 10px;
 }
 
 .navbar, .navbar-default {
   background-color: white;
   border-bottom: 3px solid black;
+  height: 70px;
+  padding-top: 10px;
 }
 
-.active-link {
-  background-color: #EDEDED;
+.navbar-link {
+  background-color: white;
+}
+
+.navbar-link > a {
+  color: black !important;
+}
+
+.active-link, .navbar-link:hover {
+  background-color: #282828;
   -webkit-transition: background-color 0.3s ease-in;
   -moz-transition: background-color 0.3s ease-in;
   -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
-  color: black;
+}
+
+.active-link > a, .navbar-link:hover > a {
+  color: white !important;
+  -webkit-transition: color 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in;
 }
 
 #site-name {
-  font-size: 1.5em;
+  font-size: 2.3em;
   color: black;
 }
 
@@ -38,7 +58,7 @@ body {
 
 .main-content {
   position: fixed;
-  margin-top: 54px;
+  margin-top: 73px;
   width: 100%;
   right: 0;
   left: 0;
@@ -100,6 +120,19 @@ body {
   padding: 15px 20px 0px 20px;
 }
 
+.contact > button {
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid black;
+  height: 30px;
+  width: 70px;
+  background-color: white;
+  color: black;
+}
+
+/*Tile stuff*/
+
 #tile {
   padding: 10px;
 }
@@ -108,18 +141,14 @@ body {
   margin: 0 auto;
   border: 2px solid black;
   text-align: center;
-  /*-webkit-transition: background-color 0.5s ease-out;
-  -moz-transition: background-color 0.5s ease-out;
-  -o-transition: background-color 0.5s ease-out;
-  transition: background-color 0.5s ease-out;*/
-  max-width: 210px;
-  height: 200px;
+  max-width: 220px;
+  height: 210px;
 }
 
 .cover {
   position: absolute;
-  width: 206px;
-  height: 196px;
+  width: 216px;
+  height: 206px;
   opacity: 0;
   background: black;
   -webkit-transition: all ease .5s;
@@ -153,7 +182,7 @@ body {
 
 #tile-inner > .icon {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #tile-inner > .descriptionShort {
@@ -161,4 +190,62 @@ body {
   padding-right: 10px;
 }
 
-/*End of profile related styling*/
+/*For Modal stuff*/
+
+.modal-icon {
+  display: inline;
+  margin-top: -10px;
+}
+
+.modal-icon > img {
+  max-height: 30px;
+}
+
+#modal-close {
+  margin-top: 8px;
+}
+
+.modal-body {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+/*Carousel stuff*/
+
+.carousel {
+  height: 306px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.carousel-control {
+  background-image: none !important;
+}
+
+.carousel-control > span {
+  color: black;
+}
+
+.carousel-image {
+  max-height: 306px;
+  margin: auto;
+}
+
+.content-description {
+  padding: 10px 10px 10px 10px;
+  text-indent: 20px;
+}
+
+.caption {
+  margin-bottom: 10px;
+  color: black;
+  text-align: center;
+}
+
+.prettyprint {
+  margin: auto;
+  width: 75%;
+  max-height: 306px;
+  overflow-y: scroll;
+  text-align: left !important;
+}

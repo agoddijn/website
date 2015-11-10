@@ -27,5 +27,10 @@ app.controller('JobModalController', ['$modalInstance', 'selected', function($mo
 
   var vm = this;
   vm.job = selected;
+  vm.interval = 10000; //ms
+  vm.noWrapSlide = false;
+  vm.close = function() {
+    $modalInstance.dismiss('cancel');
+  };
 
 }]);

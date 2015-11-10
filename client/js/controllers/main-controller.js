@@ -3,6 +3,7 @@ app.controller('MainController', ['$location', 'AboutData', function($location, 
   var vm = this;
 
   vm.shortAbout = AboutData.s;
+  vm.isCollapsed = true;
 
   vm.isActive = function(navItem) {
     if ($location.path() == navItem.url) {
