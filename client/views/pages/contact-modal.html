@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <h3 class="modal-title">
+    Contact Me!
+    <button type="button" class="close" id="modal-close" ng-click="contact.close()" aria-label="Close"><i class="fa fa-times fa-4"></i></button>
+  </h3>
+</div>
+<div class="modal-body">
+  <form class="simple-form contact" name="contactForm" novalidate>
+    <div class="contact-container">
+      <p>Name</p>
+      <input name="name" type="text" ng-model="name" placeholder="Enter your name" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }" required/>
+      <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="validation-help">You name is required.</p>
+    </div>
+    <div class="contact-container">
+      <p>E-mail</p>
+      <input name="email" type="email" ng-model="email" placeholder="Enter your email address" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine}" required/>
+      <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="validation-help">Enter a valid email.</p>
+    </div>
+    <div class="contact-container">
+      <p>Message</p>
+      <textarea name="message" type="text" rows="6" ng-model="message" placeholder="Enter your message" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine}" required></textarea>
+      <p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="validation-help">Message is required.</p>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="contact.send()" ng-disabled="contactForm.$invalid">Send</button>
+  <button class="btn btn-warning" type="button" ng-click="contact.close()">Cancel</button>
+</div>

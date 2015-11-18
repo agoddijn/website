@@ -24,7 +24,8 @@ app.controller('MainController', ['$location', 'AboutData', function($location, 
     {icon: "fa fa-instagram fa-lg", link: "https://instagram.com/itakepicturesalex/"},
     {icon: "fa fa-linkedin fa-lg", link: "https://ca.linkedin.com/pub/alex-goddijn/b3/11a/633"},
     {icon: "fa fa-github fa-lg", link: "https://github.com/agoddijn"},
-    {icon: "fa fa-youtube fa-lg", link: "https://www.youtube.com/channel/UCU6lCeBsZp-aWJ6_ymRncBw"}
+    {icon: "fa fa-youtube fa-lg", link: "https://www.youtube.com/channel/UCU6lCeBsZp-aWJ6_ymRncBw"},
+    {icon: "fa fa-vimeo fa-lg", link: "https://vimeo.com/agoddijn"}
   ];
 
 }]);

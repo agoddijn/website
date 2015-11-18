@@ -6,6 +6,8 @@
         <div class="cover">
           <div class="cover-content">
             <i class="fa fa-plus fa-3x"></i>
+            <a ng-if="project.github != null" class="tile-link" href="{{project.github}}" target="_blank">View on GitHub</a>
+            <a ng-if="project.video != null" class="tile-link" href="{{project.video}}" target="_blank">View Video</a>
           </div>
         </div>
         <div class="logo icon">

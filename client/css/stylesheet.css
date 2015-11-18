@@ -6,6 +6,14 @@ body {
   overflow-x: hidden;
 }
 
+a:hover, a:active {
+  text-decoration: none;
+}
+
+textarea:focus, input:focus, button:focus {
+  outline: 0;
+}
+
 #brand {
   height: 40px;
   display: inline;
@@ -190,6 +198,22 @@ body {
   padding-right: 10px;
 }
 
+.tile-link {
+  border: 3px solid black;
+  background-color: white;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: 3px 3px 3px 3px;
+  width: 60%;
+  color: black;
+  text-decoration: none;
+}
+
+.github-link-tile:hover {
+  color: black;
+}
+
 /*For Modal stuff*/
 
 .modal-icon {
@@ -215,7 +239,7 @@ body {
 .carousel {
   height: 306px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .carousel-control {
@@ -224,6 +248,18 @@ body {
 
 .carousel-control > span {
   color: black;
+}
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators li {
+  border-color: black;
+}
+
+.carousel-indicators li.active {
+  background-color: black;
 }
 
 .carousel-image {
@@ -248,4 +284,33 @@ body {
   max-height: 306px;
   overflow-y: scroll;
   text-align: left !important;
+}
+
+/*Modal display stuff*/
+
+.github-link {
+  text-align: center;
+}
+
+/*Contact form stuff*/
+
+.contact-container {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-container input, textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 10px 10px 10px 10px;
+}
+
+.has-error {
+  border-color: red !important;
+}
+
+.validation-help {
+  color: red;
 }

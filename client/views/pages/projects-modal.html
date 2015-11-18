@@ -6,15 +6,23 @@
   </h3>
 </div>
 <div class="modal-body">
-  <div class="description">
-    <p>{{modalCtrl.project.descriptionLong}}</p>
-  </div>
-  <div class="carousel">
-    <uib-carousel interval="modalCtrl.interval" no-wrap="vm.noWrapSlide">
-      <uib-slide ng-repeat="content in modalCtrl.project.additional">
-        <img src="{{content.content}}" ng-show="{{content.type == 'image'}}">
-        <p ng-hide="{{content.type == 'image'}}">{{content.content}}</p>
+  <div class="project-section" ng-repeat="section in modalCtrl.project.sections">
+    <h2>{{section.header}}</h2>
+    <p class="content-description" ng-bind-html="section.descriptionAbove"></p>
+    <!-- Carousel -->
+    <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide">
+      <uib-slide class="carousel-slide" ng-repeat="content in section.additional" active="content.active">
+        <img ng-if="content.type == 'image'" class="carousel-image" src="{{content.content}}">
+        <pre ng-if="content.type == 'code'" class="prettyprint" pretty-print>
+          {{content.type}}
+        </pre>
+        <iframe ng-if="content.type == 'video'" ng-src="{{content.content}}" width="544" height="306" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </uib-slide>
     </uib-carousel>
+    <div class="caption" ng-repeat="content in section.additional" ng-show="content.active && content.caption != null">
+      <p>{{content.caption}}</p>
+    </div>
+    <!-- End Carousel -->
+    <p class="content-description" ng-bind-html="section.descriptionBelow"></p>
   </div>
 </div>

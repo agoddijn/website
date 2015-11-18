@@ -1,6 +1,6 @@
 //For Projects
 //Controller
-app.controller('ProjectController', ['ProjectData', '$uibModal', '$scope',  function(ProjectData, $uibModal, $scope) {
+app.controller('ProjectController', ['ProjectData', '$uibModal', '$scope', function(ProjectData, $uibModal, $scope) {
   var vm = this;
   vm.projectList = ProjectData.projects;
 
@@ -28,7 +28,7 @@ app.controller('ProjectModalController', ['$modalInstance', 'selected', function
 
   var vm = this;
   vm.project = selected;
-  vm.interval = 5000; //ms
+  vm.interval = 10000; //ms
   vm.noWrapSlide = false;
   vm.close = function() {
     $modalInstance.dismiss('cancel');

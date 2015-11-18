@@ -8,7 +8,7 @@
 <div class="modal-body">
   <div ng-repeat="position in modalCtrl.job.positions">
     <h2>{{position.name}}</h2>
-    <p class="content-description">{{position.descriptionAbove}}</p>
+    <p class="content-description" ng-bind-html="position.descriptionAbove"></p>
     <!-- Carousel -->
     <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide">
       <uib-slide class="carousel-slide" ng-repeat="content in position.additional" active="content.active">
@@ -22,6 +22,6 @@
       <p>{{content.caption}}</p>
     </div>
     <!-- End Carousel -->
-    <p class="content-description">{{position.descriptionBelow}} <a href="{{position.github}}" class="github-link" target="_blank" ng-show="position.github != null">View on Github</a></p>
+    <p class="content-description" ng-bind-html="position.descriptionBelow"></p>
   </div>
 </div>

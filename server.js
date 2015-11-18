@@ -1,16 +1,23 @@
 // Call packages
 var express   = require('express');
+var bodyParser = require('body-parser');
 var app       = express();
 var morgan    = require('morgan');
 var config    = require('./config.js');
 var mongoose  = require('mongoose');
 var path      = require('path');
+var mandrill  = require('mandrill-api/mandrill');
+var mandrill_client = new mandrill.Mandrill(config.mandrillApi);
 
 // Set up morgan to log HTTP requests
 app.use(morgan('dev'));
 
 // Set up mongo database
 mongoose.connect(config.database);
+
+// Parse body
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //Routes
 app.get('/', function (req, res) {
@@ -19,6 +26,31 @@ app.get('/', function (req, res) {
 app.get('/:name', function (req, res) {
   res.sendfile(__dirname + '/client/views/index.html');
 });
+app.post('/sendMail', function (req, res) {
+  var name = req.body.name;
+  var email = req.body.email;
+  var message = req.body.message;
+  var toSend = {
+    "html": "<p>"+message+"</p>",
+    "text": message,
+    "subject": "From Website",
+    "from_email": email,
+    "from_name": name,
+    "to": [{
+      "email": "alex.goddijn@gmail.com",
+      "name": "Alexander Goddijn",
+      "type": "to"
+    }]
+  };
+  mandrill_client.messages.send({"message": toSend}, function(result) {
+    console.log(result);
+    res.status(200).send({success: true});
+  }, function(e) {
+    console.log("Mandrill Error: "+e.message);
+    res.send({success: false, error: e});
+  });
+});
+
 
 //Serve static files
 app.use(express.static(__dirname + '/client'));
@@ -35,4 +67,3 @@ app.use(function (req, res, next) {
 app.listen(config.port, function() {
   console.log('I\'m listening on port ' + config.port);
 });
-

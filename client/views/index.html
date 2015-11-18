@@ -17,10 +17,13 @@
     <!-- JS and angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="../scripts/ui-bootstrap.min.js"></script>
     <script type="text/javascript" src="../scripts/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/config/config.js"></script>
+    <script type="text/javascript" src="../js/controllers/contact-controller.js"></script>
     <script type="text/javascript" src="../js/directives/prettyPrintDir.js"></script>
     <script type="text/javascript" src="../prettify/google-code-prettify/prettify.js"></script>
     <script type="text/javascript" src="../js/services/about-service.js"></script>
@@ -106,8 +109,8 @@
         </div>
 
         <!-- Contact button -->
-        <div class="contact">
-          <button type="button">Contact</button>
+        <div class="contact" ng-controller="ContactController as contact">
+          <button type="button" ng-click="contact.open()">Contact</button>
         </div>
 
       </section>
