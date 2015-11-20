@@ -1,3 +1,31 @@
 <div class="about">
+  <div class="row info">
+    <div class="about-icon">
+      <i class="fa fa-home fa-5x"></i>
+    </div>
+    <div class="description">
+      <h2>Home</h2>
+      <p>{{about.home}}</p>
+    </div>
+  </div>
+  <div class="row info">
+    <div class="about-icon">
+      <i class="fa fa-globe fa-5x"></i>
+    </div>
+    <div class="description">
+      <h2>Languages</h2>
+      <p ng-repeat="lang in about.langs">{{lang}},</p>
+    </div>
+  </div>
+  <div class="row info">
+    <div class="about-icon">
+      <i class="fa fa-graduation-cap fa-5x"></i>
+    </div>
+    <div class="description">
+      <h2>Education</h2>
+      <p>High School - {{about.hs}},</p>
+      <p>University - {{about.uni}},</p>
+    </div>
+  </div>
   <p>{{about.longAbout}}</p>
 </div>

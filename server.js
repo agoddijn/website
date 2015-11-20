@@ -44,7 +44,12 @@ app.post('/sendMail', function (req, res) {
   };
   mandrill_client.messages.send({"message": toSend}, function(result) {
     console.log(result);
-    res.status(200).send({success: true});
+    var status = result[0].status;
+    if (status == 'sent') {
+      res.send({success: true});
+    } else {
+      res.send({success: false, reason: status});
+    };
   }, function(e) {
     console.log("Mandrill Error: "+e.message);
     res.send({success: false, error: e});

@@ -314,3 +314,63 @@ textarea:focus, input:focus, button:focus {
 .validation-help {
   color: red;
 }
+
+.contact-cover {
+  position: absolute;
+  width: 598px;
+  height: 417px;
+  opacity: 0.9;
+  background: white;
+  margin-left: -15px;
+}
+
+.contact-cover-content {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: black;
+}
+
+.success {
+  color: green;
+  font-size: 3em;
+}
+
+.error {
+  color: red;
+  font-size: 3em;
+}
+
+/* About page stuff */
+
+.info {
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.description {
+  padding-left: 10px;
+  top: 0;
+  right: 0;
+}
+
+.description p {
+  display: table;
+  margin-right: 5px;
+}
+
+.description h2 {
+  margin-top: 0;
+}
+
+.about-icon {
+  top: 0;
+  right: 0;
+}
+
+.about-icon, .description {
+  display: inline-block;
+}
