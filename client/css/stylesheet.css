@@ -1,16 +1,13 @@
-
-
 body {
   font-family: Ubuntu, sans-serif;
-  /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
   overflow-x: hidden;
 }
 
-a:hover, a:active {
+a:hover, a:active, {
   text-decoration: none;
 }
 
-textarea:focus, input:focus, button:focus {
+textarea:focus, input:focus, button:focus, i:focus, i:active {
   outline: 0;
 }
 
@@ -88,7 +85,9 @@ textarea:focus, input:focus, button:focus {
   overflow-y: scroll;
 }
 
-/*For all profile related styling*/
+/* ------------------------------- */
+/* For all profile related styling */
+/* ------------------------------- */
 
 .profile {
   text-align: center;
@@ -139,7 +138,9 @@ textarea:focus, input:focus, button:focus {
   color: black;
 }
 
-/*Tile stuff*/
+/* ---------- */
+/* Tile stuff */
+/* ---------- */
 
 #tile {
   padding: 10px;
@@ -214,7 +215,9 @@ textarea:focus, input:focus, button:focus {
   color: black;
 }
 
-/*For Modal stuff*/
+/* --------------- */
+/* For Modal stuff */
+/* --------------- */
 
 .modal-icon {
   display: inline;
@@ -234,7 +237,9 @@ textarea:focus, input:focus, button:focus {
   overflow-y: scroll;
 }
 
-/*Carousel stuff*/
+/* -------------- */
+/* Carousel stuff */
+/* -------------- */
 
 .carousel {
   height: 306px;
@@ -268,8 +273,11 @@ textarea:focus, input:focus, button:focus {
 }
 
 .content-description {
-  padding: 10px 10px 10px 10px;
+  padding: 10px 50px 10px 50px;
   text-indent: 20px;
+  -webkit-col/*umn-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;*/
 }
 
 .caption {
@@ -286,13 +294,17 @@ textarea:focus, input:focus, button:focus {
   text-align: left !important;
 }
 
-/*Modal display stuff*/
+/* ------------------- */
+/* Modal display stuff */
+/* ------------------- */
 
 .github-link {
   text-align: center;
 }
 
-/*Contact form stuff*/
+/* ------------------ */
+/* Contact form stuff */
+/* ------------------ */
 
 .contact-container {
   display: block;
@@ -344,33 +356,42 @@ textarea:focus, input:focus, button:focus {
   font-size: 3em;
 }
 
+/* ---------------- */
 /* About page stuff */
+/* ---------------- */
 
-.info {
-  height: 90px;
-  margin-bottom: 10px;
+.welcome-section p {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+
+  -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 20px; /* Firefox */
+  column-gap: 20px;
 }
 
-.description {
-  padding-left: 10px;
-  top: 0;
-  right: 0;
+.welcome-section h1 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.description p {
-  display: table;
-  margin-right: 5px;
+.about {
+  padding: 20px 20px 20px 20px !important;
 }
 
-.description h2 {
-  margin-top: 0;
+.welcome h1, h2 {
+  text-align: center;
 }
 
-.about-icon {
-  top: 0;
-  right: 0;
+.welcome h1 {
+  font-size: 5em;
 }
 
-.about-icon, .description {
-  display: inline-block;
+.welcome h2 {
+  font-size: 2em;
+}
+
+.welcome {
+  margin-bottom: 50px;
 }

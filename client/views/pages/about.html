@@ -1,31 +1,20 @@
 <div class="about">
-  <div class="row info">
-    <div class="about-icon">
-      <i class="fa fa-home fa-5x"></i>
-    </div>
-    <div class="description">
-      <h2>Home</h2>
-      <p>{{about.home}}</p>
-    </div>
+  <div class="welcome">
+    <h2>Welcome to the personal website of</h2>
+    <h1> Alexander <span> <img style="height: 50px;" src="../content/images/logos/website-brand.png"> </span> Goddijn </h1>
+    <h2> Amsterdam, The Netherlands </h2>
   </div>
-  <div class="row info">
-    <div class="about-icon">
-      <i class="fa fa-globe fa-5x"></i>
-    </div>
-    <div class="description">
-      <h2>Languages</h2>
-      <p ng-repeat="lang in about.langs">{{lang}},</p>
-    </div>
+  <div class="welcome-section">
+    <h1>Overview</h1>
+    <p class="long-about">{{about.longAbout}}</p>
   </div>
-  <div class="row info">
-    <div class="about-icon">
-      <i class="fa fa-graduation-cap fa-5x"></i>
-    </div>
-    <div class="description">
-      <h2>Education</h2>
-      <p>High School - {{about.hs}},</p>
-      <p>University - {{about.uni}},</p>
-    </div>
+  <div class="welcome-section">
+    <h1>Info</h1>
+    <ul>
+      <li>I speak three languages fluently (Dutch, French, English)</li>
+      <li>I study physics, engineering, and computer science at the University of British Columbia in Vancouver</li>
+      <li>Sports - skiing, mountain biking, sailing, climbing, water polo, running</li>
+      <li>Hobbies - reading, film, massive ragers at 4317 West 13th Avenue, weed, a good philosophical conversation over a cold pint in a dingy pub nobody's ever heard of</li>
+    </ul>
   </div>
-  <p>{{about.longAbout}}</p>
 </div>

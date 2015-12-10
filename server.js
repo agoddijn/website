@@ -8,6 +8,7 @@ var mongoose  = require('mongoose');
 var path      = require('path');
 var mandrill  = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill(config.mandrillApi);
+var favicon = require('serve-favicon');
 
 // Set up morgan to log HTTP requests
 app.use(morgan('dev'));
@@ -18,6 +19,9 @@ mongoose.connect(config.database);
 // Parse body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Server favicon
+app.use(favicon(__dirname + '/client/content/images/logos/website-brand.png'));
 
 //Routes
 app.get('/', function (req, res) {
