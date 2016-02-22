@@ -1,0 +1,21 @@
+<div class="login">
+
+  <h1 class="login-title">Register</h1>
+
+  <!-- Login Form -->
+  <form class="simple-form" name="loginForm" ng-submit="register.register()" novalidate>
+    <div class="login-container">
+      <input name="username" type="text" ng-model="username" placeholder="Username or email" ng-class="{ 'has-error-login' : loginForm.username.$invalid && !loginForm.username.$pristine}" required autofocus/>
+    </div>
+    <div class="login-container">
+      <input name="password" type="password" ng-model="password" placeholder="Password" ng-class="{ 'has-error-login' : loginForm.password.$invalid && !loginForm.password.$pristine}" required/>
+    </div>
+    <div class="login-container">
+      <input name="confirm" type="password" ng-model="confirm" placeholder="Retype Password" ng-class="{ 'has-error-login' : loginForm.confirm.$invalid && !loginForm.confirm.$pristine && $scope.password != $scope.confirm}" required/>
+      <p ng-show="!register.match && register.attempt">Passwords do not match</p>
+    </div>
+    <button class="btn" type="submit" ng-disabled="loginForm.$invalid">Register</button>
+  </form>
+  <!-- END form -->
+
+</div>

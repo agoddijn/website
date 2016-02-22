@@ -25,6 +25,18 @@ angular.module('routes', ['ngRoute'])
       templateUrl : '/views/pages/about.html',
       controller : 'AboutController',
       controllerAs : 'about'
+    })
+
+    .when('/register', {
+      templateUrl : 'views/pages/register.html',
+      controller : 'LoginController',
+      controllerAs : 'register'
+    })
+
+    .when('/login', {
+      templateUrl : 'views/pages/login.html',
+      controller : 'LoginController',
+      controllerAs : 'login'
     });
 
   $locationProvider.html5Mode(true);

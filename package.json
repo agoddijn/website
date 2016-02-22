@@ -6,6 +6,7 @@
     "angular": "^1.4.7",
     "angular-route": "^1.4.7",
     "angular-ui-bootstrap": "^0.14.0",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.1",
     "bootstrap": "^3.3.5",
     "express": "^4.13.3",
@@ -13,6 +14,8 @@
     "mandrill-api": "^1.0.45",
     "mongoose": "^4.1.5",
     "morgan": "^1.6.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "serve-favicon": "^2.3.0"
   }
 }

@@ -3,4 +3,5 @@
 app.controller('AboutController', ['AboutData', function(AboutData) {
   var vm = this;
   vm.longAbout = AboutData.l;
+  vm.info = AboutData.info;
 }]);

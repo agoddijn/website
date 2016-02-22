@@ -8,6 +8,8 @@ app.controller('MainController', ['$location', 'AboutData', function($location, 
   vm.isActive = function(navItem) {
     if ($location.path() == navItem.url) {
       return "active-link";
+    } else if ($location.path() == '/register' && navItem.url == '/login') {
+      return "active-link";
     } else {
       return "";
     }
@@ -16,7 +18,8 @@ app.controller('MainController', ['$location', 'AboutData', function($location, 
   vm.navItems = [
     {name: "jobs", url: "/jobs"},
     {name: "projects", url: "/projects"},
-    {name: "blogs", url: "/blogs"}
+    {name: "blogs", url: "/blogs"},
+    {name: "login", url: "/login"}
   ];
 
   vm.linkIcons = [

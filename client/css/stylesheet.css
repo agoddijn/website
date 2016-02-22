@@ -356,6 +356,38 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   font-size: 3em;
 }
 
+/* --------------------------- */
+/* Login and signup form stuff */
+/* --------------------------- */
+
+.login {
+  text-align: center;
+}
+
+.login-title {
+
+}
+
+.login-container {
+  margin-bottom: 10px;
+}
+
+.login-container input {
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.has-error-login {
+  border-bottom: 2px solid red !important;
+}
+
+.login button, .btn {
+  background: none;
+  border: 1px solid black;
+  color: black;
+  border-radius: 0px;
+}
+
 /* ---------------- */
 /* About page stuff */
 /* ---------------- */
@@ -380,7 +412,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   padding: 20px 20px 20px 20px !important;
 }
 
-.welcome h1, h2 {
+.welcome h1, .welcome h2 {
   text-align: center;
 }
 
@@ -394,4 +426,22 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 
 .welcome {
   margin-bottom: 50px;
+}
+
+/* ---------- */
+/* Blog stuff */
+/* ---------- */
+
+.blog-entrance {
+  border-bottom: 2px solid black;
+}
+
+.blog-entrance h2 {
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.blog-entrance p {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

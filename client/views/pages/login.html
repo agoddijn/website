@@ -1,0 +1,18 @@
+<div class="login">
+
+  <h1 class="login-title">Login</h1>
+
+  <!-- Login Form -->
+  <form class="simple-form" name="loginForm" ng-submit="login.login()" novalidate>
+    <div class="login-container">
+      <input name="username" type="text" ng-model="username" placeholder="Username or email" ng-class="{ 'has-error-login' : loginForm.username.$invalid && !loginForm.username.$pristine}" required autofocus/>
+    </div>
+    <div class="login-container">
+      <input name="password" type="password" ng-model="password" placeholder="Password" ng-class="{ 'has-error-login' : loginForm.password.$invalid && !loginForm.password.$pristine}" required/>
+    </div>
+    <button class="btn" type="submit" ng-disabled="loginForm.$invalid">Login</button>
+    <a href="/register" class="btn">Register</a>
+  </form>
+  <!-- END form -->
+
+</div>
