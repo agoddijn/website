@@ -25,12 +25,12 @@ function sendMail(req, res) {
     console.log(result);
     var status = result[0].status;
     if (status == 'sent') {
-      res.status(200).send({success: true});
+      res.send({success: true});
     } else {
-      res.status(400).send({success: false, reason: status});
+      res.send({success: false, reason: status});
     };
   }, function(e) {
     console.log("Mandrill Error: "+e.message);
-    res.status(400).send({success: false, error: e});
+    res.send({success: false, error: e});
   });
 };

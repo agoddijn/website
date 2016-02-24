@@ -5,7 +5,10 @@
   <!-- Login Form -->
   <form class="simple-form" name="loginForm" ng-submit="register.register()" novalidate>
     <div class="login-container">
-      <input name="username" type="text" ng-model="username" placeholder="Username or email" ng-class="{ 'has-error-login' : loginForm.username.$invalid && !loginForm.username.$pristine}" required autofocus/>
+      <input name="username" type="text" ng-model="username" placeholder="Username" ng-class="{ 'has-error-login' : loginForm.username.$invalid && !loginForm.username.$pristine}" required autofocus/>
+    </div>
+    <div class="login-container">
+      <input name="email" type="email" ng-model="email" placeholder="Email" ng-class="{ 'has-error-login' : loginForm.email.$invalid && !loginForm.email.$pristine}" required/>
     </div>
     <div class="login-container">
       <input name="password" type="password" ng-model="password" placeholder="Password" ng-class="{ 'has-error-login' : loginForm.password.$invalid && !loginForm.password.$pristine}" required/>

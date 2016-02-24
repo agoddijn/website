@@ -1,5 +1,5 @@
 //Main controller
-app.controller('MainController', ['$location', 'AboutData', function($location, AboutData) {
+app.controller('MainController', ['$location', 'AboutData', 'LoginService', function($location, AboutData, LoginService) {
   var vm = this;
 
   vm.shortAbout = AboutData.s;
@@ -30,5 +30,9 @@ app.controller('MainController', ['$location', 'AboutData', function($location, 
     {icon: "fa fa-youtube fa-lg", link: "https://www.youtube.com/channel/UCU6lCeBsZp-aWJ6_ymRncBw"},
     {icon: "fa fa-vimeo fa-lg", link: "https://vimeo.com/agoddijn"}
   ];
+
+  vm.isLoggedIn = LoginService.isLoggedIn;
+
+  vm.getUser = LoginService.getUser;
 
 }]);

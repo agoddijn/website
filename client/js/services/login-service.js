@@ -1,46 +1,92 @@
-app.factory('LoginService', ['$q', '$timeout', '$http', function($q, $timeout, $http) {
+app.factory('LoginService', ['$http', '$q', function($http, $q) {
 
-  // var user = null;
+  var user = null;
 
-  // return ({
-  //   isLoggedIn: isLoggedIn,
-  //   login: login,
-  //   logout: logout,
-  //   register: register,
-  //   getUser: getUser
-  // });
+  return ({
+    isLoggedIn: isLoggedIn,
+    login: login,
+    logout: logout,
+    register: register,
+    getUser: getUser
+  });
 
-  // function getUser() {
-  //   return user;
+  function getUser() {
+    // if (localStorage.getItem("user") != null && user == null) {
+    //   loadFromLocalStorage();
+    // };
+    // DEBUG
+    console.log(user);
+    // END DEBUG
+    return user;
+  };
+
+  function login(data) {
+    var deferred = $q.defer();
+
+    $http.post('/login', data).then(function(res){
+      if (res.data.success) {
+        // DEBUG
+        console.log("Great success");
+        console.log(res.data.user);
+        // END DEBUG
+        user = res.data.user;
+        deferred.resolve(res.data);
+      } else {
+        // DEBUG
+        console.log("Error");
+        console.log(res.data.error);
+        // END DEBUG
+        deferred.reject(res.data);
+      }
+    })
+
+    // saveToLocalStorage();
+    return deferred.promise;
+  };
+
+  function register(data) {
+    var deferred = $q.defer();
+
+    // Register user
+    $http.post('/register', data).then(function(res){
+      if (res.data.success) {
+        // DEBUG
+        console.log("Great success!");
+        console.log(res.data.user);
+        // END DEBUG
+        user = res.data.user;
+        deferred.resolve(res.data);
+      } else {
+        // DEBUG
+        console.log("Big failure!");
+        console.log(res.data.error);
+        // END DEBUG
+        deferred.reject(res.data);
+      };
+    })
+
+    // saveToLocalStorage();
+    return deferred.promise;
+  };
+
+  function logout() {
+    user = null;
+    // saveToLocalStorage();
+  };
+
+  function isLoggedIn() {
+    // DEBUG
+    console.log(user != null);
+    // END DEBUG
+    return user != null;
+  };
+
+  // function saveToLocalStorage() {
+  //   localStorage.setItem("user", user);
   // };
 
-  // function login(username, password) {
-  //   var data = {
-  //     username: username,
-  //     password: password
-  //   };
-
-  //   // Send post request to server
-  //   $http.post('/user/login', data)
-  //     .success(function(data, status))
-
-  // };
-
-  // function register(data) {
-  //   // Register user
-  //   $http.post('/register', data).then(function(res){
-  //     if (res.data.success) {
-  //       vm.attempt = true;
-  //       vm.success = true;
-  //       console.log("Great success!");
-  //       user
-  //     } else {
-  //       vm.errorReason = res.data.reason;
-  //       vm.attempt = true;
-  //       vm.success = false;
-  //       console.log("Big failure!");
-  //     };
-  //   })
+  // function loadFromLocalStorage() {
+  //   user = localStorage.getItem("user");
   // };
 
 }])

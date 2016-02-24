@@ -82,6 +82,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 
 .injected {
   height: 100vh;
+  padding-top: 20px;
   overflow-y: scroll;
 }
 

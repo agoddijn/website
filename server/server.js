@@ -51,7 +51,7 @@ app.use(function (req, res, next) {
 
 //Routes
 app.post('/sendMail', require(__dirname + '/routes/sendMail.js'));
-// app.use('/login', require(__dirname + '/routes/login.js'));
+app.post('/login', require(__dirname + '/routes/login.js'));
 app.post('/register', require(__dirname + '/routes/register.js'));
 // app.use('/article', require(__dirname + '/routes/articles.js'))
 
