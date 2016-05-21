@@ -18,8 +18,8 @@ app.controller('MainController', ['$location', 'AboutData', 'LoginService', func
   vm.navItems = [
     {name: "jobs", url: "/jobs"},
     {name: "projects", url: "/projects"},
-    {name: "blogs", url: "/blogs"},
-    {name: "login", url: "/login"}
+    {name: "blogs", url: "/blogs"}
+    //{name: "login", url: "/login"}
   ];
 
   vm.linkIcons = [
@@ -34,5 +34,7 @@ app.controller('MainController', ['$location', 'AboutData', 'LoginService', func
   vm.isLoggedIn = LoginService.isLoggedIn;
 
   vm.getUser = LoginService.getUser;
+
+  vm.logout = LoginService.logout;
 
 }]);

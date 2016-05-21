@@ -36,6 +36,13 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   color: black !important;
 }
 
+.navbar-link > button {
+  border: none;
+  background-color: white;
+  color: black;
+  display: inline;
+}
+
 .active-link, .navbar-link:hover {
   background-color: #282828;
   -webkit-transition: background-color 0.3s ease-in;

@@ -11,9 +11,9 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
   });
 
   function getUser() {
-    // if (localStorage.getItem("user") != null && user == null) {
-    //   loadFromLocalStorage();
-    // };
+    if (localStorage.getItem("user") != 'null' && user == null) {
+      loadFromLocalStorage();
+    };
     // DEBUG
     console.log(user);
     // END DEBUG
@@ -29,7 +29,7 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
         console.log("Great success");
         console.log(res.data.user);
         // END DEBUG
-        user = res.data.user;
+        localLogin(res.data.user);
         deferred.resolve(res.data);
       } else {
         // DEBUG
@@ -40,7 +40,6 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
       }
     })
 
-    // saveToLocalStorage();
     return deferred.promise;
   };
 
@@ -54,7 +53,7 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
         console.log("Great success!");
         console.log(res.data.user);
         // END DEBUG
-        user = res.data.user;
+        localLogin(res.data.user);
         deferred.resolve(res.data);
       } else {
         // DEBUG
@@ -65,13 +64,12 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
       };
     })
 
-    // saveToLocalStorage();
     return deferred.promise;
   };
 
   function logout() {
     user = null;
-    // saveToLocalStorage();
+    localStorage.removeItem('user');
   };
 
   function isLoggedIn() {
@@ -81,12 +79,13 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
     return user != null;
   };
 
-  // function saveToLocalStorage() {
-  //   localStorage.setItem("user", user);
-  // };
+  function localLogin(curUser) {
+    user = curUser;
+    localStorage.setItem('user', curUser);
+  };
 
-  // function loadFromLocalStorage() {
-  //   user = localStorage.getItem("user");
-  // };
+  function loadFromLocalStorage() {
+    user = localStorage.getItem("user");
+  };
 
 }])

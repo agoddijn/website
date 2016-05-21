@@ -75,6 +75,12 @@
             <li ng-repeat="navItem in main.navItems" class="navbar-link" ng-class="main.isActive(navItem)">
               <a href="{{navItem.url}}">{{navItem.name}}</a>
             </li>
+            <li class="navbar-link" ng-class="main.isActive({name: 'login', url: '/login'})" ng-hide="main.isLoggedIn()">
+              <a href="/login">login</a>
+            </li>
+            <li ng-show="main.isLoggedIn()" class="navbar-link">
+              <button ng-click="main.logout()">{{main.getUser().username}}</button>
+            </li>
           </ul>
         </div>
 
