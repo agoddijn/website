@@ -1,3 +1,5 @@
+const USER = "agoddijnuser";
+
 app.factory('LoginService', ['$http', '$q', function($http, $q) {
 
   var user = null;
@@ -7,13 +9,11 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
     login: login,
     logout: logout,
     register: register,
-    getUser: getUser
+    getUser: getUser,
+    attemptLogin: attemptLogin
   });
 
   function getUser() {
-    if (localStorage.getItem("user") != 'null' && user == null) {
-      loadFromLocalStorage();
-    };
     // DEBUG
     console.log(user);
     // END DEBUG
@@ -69,7 +69,7 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
 
   function logout() {
     user = null;
-    localStorage.removeItem('user');
+    localStorage.removeItem(USER);
   };
 
   function isLoggedIn() {
@@ -81,11 +81,31 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
 
   function localLogin(curUser) {
     user = curUser;
-    localStorage.setItem('user', curUser);
+    localStorage.setItem(USER, user);
   };
 
   function loadFromLocalStorage() {
-    user = localStorage.getItem("user");
+    user = localStorage.getItem(USER);
+  };
+
+  /*
+    Attempts a login from the local storage,
+    returns true if successeful, false otherwise
+  */
+  function attemptLogin() {
+    // DEBUG
+    console.log(localStorage.getItem(USER));
+    console.log(user);
+    // END DEBUG
+    if (localStorage.getItem(USER) != null && !isLoggedIn()) {
+      loadFromLocalStorage();
+      console.log("Returning true");
+      console.log(user)
+      return true;
+    } else {
+      console.log("Returning false");
+      return false;
+    };
   };
 
 }])

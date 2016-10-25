@@ -15,7 +15,7 @@
     <base href="/">
 
     <!-- JS and angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.min.js"></script>
@@ -72,14 +72,14 @@
             <li class="hidden">
               <a href="/"></a>
             </li>
-            <li ng-repeat="navItem in main.navItems" class="navbar-link" ng-class="main.isActive(navItem)">
+            <li ng-repeat="navItem in main.navItems" class="navbar-link" ng-class="main.isActive(navItem)" ng-click="main.checkCollapsed()">
               <a href="{{navItem.url}}">{{navItem.name}}</a>
             </li>
-            <li class="navbar-link" ng-class="main.isActive({name: 'login', url: '/login'})" ng-hide="main.isLoggedIn()">
+            <li class="navbar-link" ng-class="main.isActive({name: 'login', url: '/login'})" ng-hide="main.isLoggedIn()" ng-click="main.checkCollapsed()">
               <a href="/login">login</a>
             </li>
-            <li ng-show="main.isLoggedIn()" class="navbar-link">
-              <button ng-click="main.logout()">{{main.getUser().username}}</button>
+            <li ng-show="main.isLoggedIn()" class="navbar-link" ng-click="main.checkCollapsed()">
+              <button ng-click="main.logout()">{{main.getUser().username}} Logout</button>
             </li>
           </ul>
         </div>
