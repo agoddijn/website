@@ -75,12 +75,12 @@
             <li ng-repeat="navItem in main.navItems" class="navbar-link" ng-class="main.isActive(navItem)" ng-click="main.checkCollapsed()">
               <a href="{{navItem.url}}">{{navItem.name}}</a>
             </li>
-            <li class="navbar-link" ng-class="main.isActive({name: 'login', url: '/login'})" ng-hide="main.isLoggedIn()" ng-click="main.checkCollapsed()">
+            <!-- <li class="navbar-link" ng-class="main.isActive({name: 'login', url: '/login'})" ng-hide="main.isLoggedIn()" ng-click="main.checkCollapsed()">
               <a href="/login">login</a>
             </li>
             <li ng-show="main.isLoggedIn()" class="navbar-link" ng-click="main.checkCollapsed()">
               <a ng-click="main.logout()"><b>{{main.getUser().username}}</b> | Logout</a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
