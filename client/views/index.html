@@ -79,7 +79,7 @@
               <a href="/login">login</a>
             </li>
             <li ng-show="main.isLoggedIn()" class="navbar-link" ng-click="main.checkCollapsed()">
-              <button ng-click="main.logout()">{{main.getUser().username}} Logout</button>
+              <a ng-click="main.logout()"><b>{{main.getUser().username}}</b> | Logout</a>
             </li>
           </ul>
         </div>

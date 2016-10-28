@@ -10,13 +10,10 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
     logout: logout,
     register: register,
     getUser: getUser,
-    attemptLogin: attemptLogin
+    //attemptLogin: attemptLogin
   });
 
   function getUser() {
-    // DEBUG
-    console.log(user);
-    // END DEBUG
     return user;
   };
 
@@ -73,39 +70,45 @@ app.factory('LoginService', ['$http', '$q', function($http, $q) {
   };
 
   function isLoggedIn() {
-    // DEBUG
-    console.log(user != null);
-    // END DEBUG
     return user != null;
   };
 
   function localLogin(curUser) {
     user = curUser;
-    localStorage.setItem(USER, user);
   };
 
-  function loadFromLocalStorage() {
-    user = localStorage.getItem(USER);
-  };
+  // function loadFromLocalStorage() {
+  //   user = localStorage.getItem(USER);
+  //   // DEBUG
+  //   console.log("Loading from local storage");
+  //   console.log(user);
+  //   console.log(user.username);
+  //   // END DEBUG
+  // };
 
   /*
     Attempts a login from the local storage,
     returns true if successeful, false otherwise
   */
-  function attemptLogin() {
-    // DEBUG
-    console.log(localStorage.getItem(USER));
-    console.log(user);
-    // END DEBUG
-    if (localStorage.getItem(USER) != null && !isLoggedIn()) {
-      loadFromLocalStorage();
-      console.log("Returning true");
-      console.log(user)
-      return true;
-    } else {
-      console.log("Returning false");
-      return false;
-    };
-  };
+  // function attemptLogin() {
+  //   // DEBUG
+  //   console.log("attemptLogin");
+  //   console.log(localStorage.getItem(USER));
+  //   console.log(user);
+  //   // END DEBUG
+  //   if (localStorage.getItem(USER) != null && !isLoggedIn()) {
+  //     loadFromLocalStorage();
+  //     // DEBUG
+  //     console.log("Returning true");
+  //     console.log(user)
+  //     // END DEBUG
+  //     return true;
+  //   } else {
+  //     // DEBUG
+  //     console.log("Returning false");
+  //     // END DEBUG
+  //     return false;
+  //   };
+  // };
 
 }])

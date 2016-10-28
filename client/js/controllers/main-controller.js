@@ -41,10 +41,4 @@ app.controller('MainController', ['$location', 'AboutData', 'LoginService', func
     if(!vm.isCollapsed) vm.isCollapsed = !vm.isCollapsed;
   }
 
-  function init() {
-    LoginService.attemptLogin();
-  };
-
-  init();
-
 }]);

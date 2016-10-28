@@ -30,17 +30,6 @@ app.controller('LoginController', ['$http', '$scope', 'LoginService', function($
         vm.errorReason = data.error;
       };
     })
-
-    // $http.post('/login', data).then(function(res){
-    //   if (res.data.success) {
-    //     console.log("Great success");
-    //     console.log(res.data.user);
-    //   } else {
-    //     vm.errorReason = res.data.error;
-    //     console.log("Error");
-    //     console.log(res.data.error);
-    //   }
-    // })
   }
 
   vm.register = function() {
@@ -70,21 +59,6 @@ app.controller('LoginController', ['$http', '$scope', 'LoginService', function($
           vm.errorReason = data.error;
         };
       })
-
-      // $http.post('/register', data).then(function(res){
-      //   if (res.data.success) {
-      //     vm.attempt = true;
-      //     vm.success = true;
-      //     console.log("Great success!");
-      //     console.log(res.data.user);
-      //   } else {
-      //     vm.errorReason = res.data.error;
-      //     vm.attempt = true;
-      //     vm.success = false;
-      //     console.log("Big failure!");
-      //     console.log(vm.errorReason);
-      //   };
-      // })
 
     // Passwords don't match
     } else {

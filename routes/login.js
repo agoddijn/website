@@ -9,7 +9,9 @@ function loginUser(req, res) {
 
   User.findOne({ $or: [{ username: username}, { email: username}] }, function(err, user) {
     if (err) {
-      res.send({ success: false, error: err})
+      res.send({ success: false, error: err});
+    } else if(user == null) {
+      res.send({ success: false, error: "User not found"});
     } else {
       user.comparePassword(password, function(err, match) {
         if (err) {
