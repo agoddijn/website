@@ -7,7 +7,7 @@
 <div class="modal-body">
 
   <!-- Covers -->
-  <div class="contact-cover" ng-show="contact.attempt && !contact.success">
+  <!-- <div class="contact-cover" ng-show="contact.attempt && !contact.success">
     <div class="contact-cover-content">
       <p class="error">Error: {{contact.errorReason}}</p>
     </div>
@@ -21,11 +21,11 @@
     <div class="contact-cover-content">
       <i class="fa fa-spinner fa-spin fa-5x"></i>
     </div>
-  </div>
+  </div> -->
   <!-- END covers -->
 
   <!-- Form -->
-  <form class="simple-form contact" name="contactForm" novalidate>
+  <!-- <form class="simple-form contact" name="contactForm" novalidate>
     <div class="contact-container">
       <p>Name</p>
       <input name="name" type="text" ng-model="name" placeholder="Enter your name" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }" required/>
@@ -41,11 +41,14 @@
       <textarea name="message" type="text" rows="6" ng-model="message" placeholder="Enter your message" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine}" required></textarea>
       <p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="validation-help">Message is required.</p>
     </div>
-  </form>
+  </form> -->
   <!-- END form -->
+
+  <p> Email: <b> alex.goddijn@gmail.com </b></p>
+  <p> Phone: <b> +1 778 929 4909 </b></p>
 
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" type="button" ng-click="contact.send()" ng-disabled="contactForm.$invalid">Send</button>
-  <button class="btn btn-warning" type="button" ng-click="contact.close()">Cancel</button>
+  <!-- <button class="btn btn-primary" type="button" ng-click="contact.send()" ng-disabled="contactForm.$invalid">Send</button> -->
+  <button class="btn btn-warning" type="button" ng-click="contact.close()">Close</button>
 </div>
