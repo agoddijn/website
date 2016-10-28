@@ -26,6 +26,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Server favicon
 app.use(favicon(path.resolve('./client/content/images/logos/website-brand.png')));
 
+//Serve static files
+app.use(express.static(path.resolve('./client')));
+app.use('/scripts', express.static(path.resolve('./node_modules/angular-ui-bootstrap')));
+app.use('/scripts', express.static(path.resolve('./node_modules/requirejs')));
+
 // Default Routes
 app.get('/', function (req, res) {
   res.sendfile(path.resolve('./client/views/index.html'));
@@ -33,12 +38,6 @@ app.get('/', function (req, res) {
 app.get('/:name', function (req, res) {
   res.sendfile(path.resolve('./client/views/index.html'));
 });
-
-
-//Serve static files
-app.use(express.static(path.resolve('./client')));
-app.use('/scripts', express.static(path.resolve('./node_modules/angular-ui-bootstrap')));
-app.use('/scripts', express.static(path.resolve('./node_modules/requirejs')));
 
 //Log requests
 app.use(function (req, res, next) {
