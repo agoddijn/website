@@ -48,6 +48,11 @@ app.get('/project/:name', function(req, res) {
   var toSend = require(path.resolve('./data/projects/' + name + '.js'));
   res.send(toSend);
 });
+app.get('/blog/:name', function(req, res) {
+  var name = req.params.name;
+  var toSend = require(path.resolve('./data/blogs/' + name + '.js'));
+  res.send(toSend);
+})
 
 //Log requests
 app.use(function (req, res, next) {

@@ -16,7 +16,7 @@ app.service('ProjectData', ['$http', '$q', function($http, $q) {
         if (res.data) {
           svc.projects.push(res.data);
         } else {
-          console.log("Couldn't get job");
+          console.log("Couldn't get project");
         }
       })
     }

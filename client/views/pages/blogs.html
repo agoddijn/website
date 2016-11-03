@@ -1,5 +1,5 @@
 <div>
-  <div class="blog-entrance" ng-repeat="blog in blogs.blogs">
+  <div class="blog-entrance" ng-repeat="blog in blogs.blogs | orderBy:'date'">
     <h1>{{blog.title}}</h1>
     <h2>{{blog.date | date : 'longDate'}}</h2>
     <p>{{blog.content}}</p>
