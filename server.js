@@ -38,6 +38,16 @@ app.get('/', function (req, res) {
 app.get('/:name', function (req, res) {
   res.sendfile(path.resolve('./client/views/index.html'));
 });
+app.get('/job/:name', function(req, res) {
+  var name = req.params.name;
+  var toSend = require(path.resolve('./data/jobs/' + name + '.js'));
+  res.send(toSend);
+});
+app.get('/project/:name', function(req, res) {
+  var name = req.params.name;
+  var toSend = require(path.resolve('./data/projects/' + name + '.js'));
+  res.send(toSend);
+});
 
 //Log requests
 app.use(function (req, res, next) {
@@ -49,7 +59,6 @@ app.use(function (req, res, next) {
 app.post('/sendMail', require(__dirname + '/routes/sendMail.js'));
 app.post('/login', require(__dirname + '/routes/login.js'));
 app.post('/register', require(__dirname + '/routes/register.js'));
-// app.use('/article', require(__dirname + '/routes/articles.js'))
 
 //Start server
 app.listen(config.port, function() {

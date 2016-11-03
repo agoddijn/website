@@ -3,6 +3,7 @@
 app.controller('ProjectController', ['ProjectData', '$uibModal', '$scope', function(ProjectData, $uibModal, $scope) {
   var vm = this;
   vm.projectList = ProjectData.projects;
+  ProjectData.getProjects();
 
   vm.open = function(project) {
 

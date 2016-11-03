@@ -2,6 +2,7 @@
 app.controller('JobController', ['$scope', 'JobData', '$uibModal', function($scope, JobData, $uibModal) {
   var vm = this;
   vm.jobList = JobData.jobs;
+  JobData.getJobs();
 
   vm.open = function(job) {
 
