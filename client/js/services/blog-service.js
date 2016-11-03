@@ -1,19 +1,27 @@
-app.service('BlogData', function() {
-  var blogs = [
-    {
-      id: "1",
-      title: "First blog post",
-      date: new Date(),
-      content: "This is my first blog post.",
-      additional: []
-    },
-    {
-      id: "2",
-      title: "Second blog post",
-      date: new Date(),
-      content: "To test blog posts",
-      additional: []
+app.service('BlogData', ['$http', '$q', function($http, $q) {
+
+  var svc = {
+    names: ["first"],
+    blogs: [],
+    getBlogs: getBlogs
+  }
+
+  var length = svc.names.length;
+
+  function getBlogs() {
+    if (length == svc.blogs.length) return;
+    for (var i = 0; i < length; i++){
+      var url = "/blog/" + svc.names[i];
+      $http.get(url).then(function(res){
+        if (res.data) {
+          svc.blogs.push(res.data);
+        } else {
+          console.log("Couldn't get blog");
+        }
+      })
     }
-  ]
-  return blogs;
-});
+  }
+
+  return svc;
+
+}]);

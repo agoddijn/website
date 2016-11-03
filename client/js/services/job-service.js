@@ -1,4 +1,4 @@
-app.factory('JobData', ['$http', '$q', function($http, $q) {
+app.service('JobData', ['$http', '$q', function($http, $q) {
 
   var svc = {
     names: ["tomtom", "axiomzen"],

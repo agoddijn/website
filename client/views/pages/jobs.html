@@ -1,5 +1,5 @@
 <div>
-  <div class="col-md-4" ng-repeat="job in jobs.jobList" id="tile">
+  <div class="col-md-4" ng-repeat="job in jobs.jobList | orderBy:'name'" id="tile">
     <div ng-click="jobs.open(job)" id="tile-inner">
       <div class="cover">
         <div class="cover-content">
