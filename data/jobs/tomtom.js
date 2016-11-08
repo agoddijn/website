@@ -1,3 +1,5 @@
+var path = "/content/images/jobs/tomtom/";
+
 module.exports = {
     name: "TomTom",
     logo: "/content/images/logos/TomTom.png",
@@ -34,12 +36,12 @@ public List<Hub> mainAlgorithm() {\n\
           },
           {
             type: "image",
-            content: "/content/images/jobs/tomtom/googleEarthDemo.png",
+            content: path + "googleEarthDemo.png",
             caption: "Placement of hubs on map"
           },
           {
             type: "image",
-            content: "/content/images/jobs/tomtom/hubDemo.png",
+            content: path + "hubDemo.png",
             caption: "Accuracy of hub palcement"
           },
           {
@@ -92,12 +94,12 @@ public Point2D findCentre(Hub hub) {\n\
         additional: [
           {
             type: "image",
-            content: "/content/images/jobs/tomtom/activityTrackerResearch.png",
+            content: path + "activityTrackerResearch.png",
             caption: "Activity trackers on the market at the time"
           },
           {
             type: "image",
-            content: "/content/images/jobs/tomtom/activityTrackerPackaging.png",
+            content: path + "activityTrackerPackaging.png",
             caption: "Packaging for those trackers"
           }
         ]

@@ -1,4 +1,4 @@
-app.service('ProjectData', ['$http', '$q', function($http, $q) {
+app.factory('ProjectData', ['$http', '$q', function($http, $q) {
 
   var svc = {
     names: ["halp", "website", "youtube"],

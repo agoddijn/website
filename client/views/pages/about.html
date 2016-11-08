@@ -1,15 +1,18 @@
 <div class="about">
   <div class="welcome">
-    <h2>Welcome to the personal website of</h2>
     <h1> Alexander <span> <img style="height: 50px;" src="../content/images/logos/website-brand.png"> </span> Goddijn </h1>
-    <h2> Amsterdam, The Netherlands </h2>
+    <h2> Amsterdam / Vancouver </h2>
   </div>
+  <h3>Bio</h3>
   <div class="welcome-section">
-    <h1>Overview</h1>
-    <p class="long-about">{{about.longAbout}}</p>
+    <div class="long-about" ng-bind-html="about.longAbout"></div>
+    <div class="about-pics">
+      <img ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" ng-if="pic.index==about.selected">
+      <img ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" style="margin-top: 32%" ng-if="pic.index==about.selected2">
+    </div>
   </div>
+  <h3>Info</h3>
   <div class="welcome-section">
-    <h1>Info</h1>
     <ul>
       <li ng-repeat="item in about.info"> {{item}} </li>
     </ul>

@@ -1,3 +1,5 @@
+var path = "/content/images/jobs/routific/";
+
 module.exports = {
     name: "AxiomZen",
     logo: "/content/images/logos/AxiomZen.png",
@@ -146,12 +148,12 @@ calculate_factor(['UK'])",
           },
           {
             type: "image",
-            content: "/content/images/jobs/routific/contactModal.png",
+            content: path + "contactModal.png",
             caption: "Designed and implemented the contact form (on both front end and back end)"
           },
           {
             type: "image",
-            content: "/content/images/jobs/routific/earlyWork.png",
+            content: path + "earlyWork.png",
             caption: "Some earlier work"
           }
         ]

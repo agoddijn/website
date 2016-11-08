@@ -1,3 +1,5 @@
+var path = "/content/images/projects/halp/";
+
 module.exports =  {
     title: "H.A.L.P",
     icon: "/content/images/logos/HALP.png",
@@ -11,22 +13,22 @@ module.exports =  {
         additional: [
           {
             type: "image",
-            content: "/content/images/projects/halp/playingSurface.png",
+            content: path + "playingSurface.png",
             caption: "The competition surface (burning building)"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/pets.png",
+            content: path + "pets.png",
             caption: "An example of the pets. Magnets were glued to the heads"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/group.jpg",
+            content: path + "group.jpg",
             caption: "Our group (Far left and three on the right)"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/halp-render.png",
+            content: path + "halp-render.png",
             caption: "The final product rendered in SolidWorks"
           }
         ]
@@ -38,37 +40,37 @@ module.exports =  {
         additional: [
           {
             type: "image",
-            content: "/content/images/projects/halp/waterjet.png",
+            content: path + "waterjet.png",
             caption: "Water jet cutter used to cut sheet metals"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/laserCutter.png",
+            content: path + "laserCutter.png",
             caption: "Laser cutter used to cut plasticss"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/driveTrain1.png",
+            content: path + "driveTrain1.png",
             caption: "Initial CAD sketch of the drivetrain"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/driveTrain2.png",
+            content: path + "driveTrain2.png",
             caption: "Progression of drivetrain"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/driveTrain3.jpg",
+            content: path + "driveTrain3.jpg",
             caption: "Drivetrain on the robot"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/armBase.jpg",
+            content: path + "armBase.jpg",
             caption: "Implementation of swivelling arm base"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/armPlate.jpg",
+            content: path + "armPlate.jpg",
             caption: "Implementation of arm plate to pick up and drop pets"
           },
         ]
@@ -80,22 +82,22 @@ module.exports =  {
         additional: [
           {
             type: "image",
-            content: "/content/images/projects/halp/irCircuit.png",
+            content: path + "irCircuit.png",
             caption: "IR Detector circuit"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/hBridge.png",
+            content: path + "hBridge.png",
             caption: "H-Bridge cricuit"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/circuits.jpg",
+            content: path + "circuits.jpg",
             caption: "The final circuits"
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/tinah.png",
+            content: path + "tinah.png",
             caption: "TINAH microprocessor"
           }
         ]
@@ -391,77 +393,77 @@ void PIDTape(bool timeout)\n\
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/comp1.jpg",
+            content: path + "comp1.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/comp2.jpg",
+            content: path + "comp2.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/comp3.jpg",
+            content: path + "comp3.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc1.jpg",
+            content: path + "misc1.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc2.jpg",
+            content: path + "misc2.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc3.jpg",
+            content: path + "misc3.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc4.jpg",
+            content: path + "misc4.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc5.jpg",
+            content: path + "misc5.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc6.jpg",
+            content: path + "misc6.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc7.jpg",
+            content: path + "misc7.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc8.jpg",
+            content: path + "misc8.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc9.jpg",
+            content: path + "misc9.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc10.jpg",
+            content: path + "misc10.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc11.jpg",
+            content: path + "misc11.jpg",
             caption: ""
           },
           {
             type: "image",
-            content: "/content/images/projects/halp/misc12.jpg",
+            content: path + "misc12.jpg",
             caption: ""
           },
         ]
