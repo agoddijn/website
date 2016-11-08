@@ -1,4 +1,4 @@
-app.service('BlogData', ['$http', '$q', function($http, $q) {
+app.factory('BlogData', ['$http', '$q', function($http, $q) {
 
   var svc = {
     names: ["first"],

@@ -85,6 +85,9 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   .profile {
     display: none;
   }
+  .about-pics {
+    display: none;
+  }
 }
 
 .injected {
@@ -401,14 +404,19 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 /* About page stuff */
 /* ---------------- */
 
-.welcome-section p {
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-  -moz-column-count: 2; /* Firefox */
-  column-count: 2;
+.about {
+  padding: 20px 20px 20px 20px !important;
+  overflow-y: scroll;
+}
 
-  -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 20px; /* Firefox */
-  column-gap: 20px;
+.welcome-section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.welcome-section p {
+  text-indent: 40px;
 }
 
 .welcome-section h1 {
@@ -417,9 +425,46 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   margin-bottom: 20px;
 }
 
-.about {
-  padding: 20px 20px 20px 20px !important;
-  overflow-y: scroll;
+.long-about, .about-pics {
+  width: 100%;
+  float: left;
+}
+
+/*.about-pics {
+  width: 300%;
+}*/
+
+.about-pic {
+  position: absolute;
+  max-width: 40%;
+  max-height: 300px;
+  display: block;
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+.about-pic.ng-enter, .about-pic.ng-leave {
+  -webkit-transition:all linear 1s;
+  -moz-transition:all linear 1s;
+  -ms-transition:all linear 1s;
+  -o-transition:all linear 1s;
+  transition:all linear 1s;
+}
+
+.about-pic.ng-enter {
+  opacity: 0;
+}
+
+.about-pic.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.about-pic.ng-leave {
+  opacity: 1;
+}
+
+.about-pic.ng-leave.ng-leave-active {
+  opacity: 0;
 }
 
 .welcome h1, .welcome h2 {
