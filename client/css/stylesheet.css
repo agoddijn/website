@@ -409,6 +409,9 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   overflow-y: scroll;
 }
 
+.long-about {
+}
+
 .welcome-section {
   width: 100%;
   margin: 0 auto;
@@ -425,22 +428,21 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   margin-bottom: 20px;
 }
 
-.long-about, .about-pics {
-  width: 100%;
-  float: left;
+.about-pics {
+  position: relative;
+  float: right;
+  width: 300px;
+  height: 200px;
+  top: 0px;
+  right: 0px;
+  margin-left: 1em;
 }
-
-/*.about-pics {
-  width: 300%;
-}*/
 
 .about-pic {
   position: absolute;
-  max-width: 40%;
-  max-height: 300px;
-  display: block;
-  margin-left: 5%;
-  margin-top: 1%;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .about-pic.ng-enter, .about-pic.ng-leave {

@@ -5,10 +5,12 @@
   </div>
   <h3>Bio</h3>
   <div class="welcome-section">
-    <div class="long-about" ng-bind-html="about.longAbout"></div>
-    <div class="about-pics">
-      <img ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" ng-if="pic.index==about.selected">
-      <!-- <img ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" style="margin-top: 32%" ng-if="pic.index==about.selected2"> -->
+    <div class="long-about">
+      <div class="about-pics">
+        <img ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" ng-if="pic.index==about.selected">
+      </div>
+      <p ng-repeat="para in about.longAbout">{{para}}</p>
+      <div style="clear:both"></div>
     </div>
   </div>
   <h3>Info</h3>
