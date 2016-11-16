@@ -495,12 +495,44 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   border-bottom: 2px solid black;
 }
 
-.blog-entrance h2 {
+.blog-title-container {
+  height: 10em;
+  color: white;
+  padding-left: 20px;
+}
+
+.blog-title-container h2 {
   text-align: left;
   font-size: 1.5em;
 }
 
-.blog-entrance p {
+.blog-content-container {
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+}
+
+.blog-content-container p {
+  text-indent: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.blog-content-container.open-blog {
+  overflow-y: auto;
+}
+
+.blog-content-container.closed-blog {
+  max-height: 7em !important;
+  overflow-y: hidden;
+}
+
+.show-more {
+  width: 100%;
+  text-align: right;
+  border: none;
+  height: 35px;
+  background-color: white;
 }
