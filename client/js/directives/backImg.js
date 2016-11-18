@@ -3,9 +3,7 @@ app.directive('backImg', function(){
     link: function($scope, element, attributes) {
       var url = $scope.blog.image;
       element.css({
-        'background-image': 'url(' + url +')',
-        'backgroud-size': 'cover',
-        'background-repeat': 'no-repeat',
+        'background-image': 'url(' + url +')'
       });
     }
   };

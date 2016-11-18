@@ -8,9 +8,9 @@
 <div class="modal-body">
   <div class="project-section" ng-repeat="section in modalCtrl.project.sections">
     <h2>{{section.header}}</h2>
-    <p class="content-description" ng-bind-html="section.descriptionAbove"></p>
+    <p class="content-description" ng-bind-html="section.descriptionAbove" ng-show="section.descriptionAbove"></p>
     <!-- Carousel -->
-    <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide">
+    <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide" ng-hide="section.additional.length == 0">
       <uib-slide class="carousel-slide" ng-repeat="content in section.additional" active="content.active">
         <img ng-if="content.type == 'image'" class="carousel-image" src="{{content.content}}">
         <pre ng-if="content.type == 'code'" class="prettyprint" pretty-print>
@@ -23,6 +23,6 @@
       <p>{{content.caption}}</p>
     </div>
     <!-- End Carousel -->
-    <p class="content-description" ng-bind-html="section.descriptionBelow"></p>
+    <p class="content-description" ng-bind-html="section.descriptionBelow" ng-show="section.descriptionBelow"></p>
   </div>
 </div>

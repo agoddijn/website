@@ -8,9 +8,9 @@
 <div class="modal-body">
   <div ng-repeat="position in modalCtrl.job.positions">
     <h2>{{position.name}}</h2>
-    <p class="content-description" ng-bind-html="position.descriptionAbove"></p>
+    <p class="content-description" ng-bind-html="position.descriptionAbove" ng-show="position.descriptionAbove"></p>
     <!-- Carousel -->
-    <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide">
+    <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide" ng-hide="position.additional.length == 0">
       <uib-slide class="carousel-slide" ng-repeat="content in position.additional" active="content.active">
         <img class="carousel-image" src="{{content.content}}" ng-show="content.type == 'image'">
         <pre class="prettyprint" pretty-print ng-show="content.type == 'code'">
@@ -22,6 +22,6 @@
       <p>{{content.caption}}</p>
     </div>
     <!-- End Carousel -->
-    <p class="content-description" ng-bind-html="position.descriptionBelow"></p>
+    <p class="content-description" ng-bind-html="position.descriptionBelow" ng-show="position.descriptionBelow"></p>
   </div>
 </div>
