@@ -12,7 +12,7 @@ app.service('AboutData', function(){
     "Fluent in three languages (Dutch, French, English)",
     "Studying physics, engineering, and computer science at the University of British Columbia in Vancouver",
     "Sports - skiing, mountain biking, sailing, climbing, water polo, running",
-    "Hobbies - reading, film"
+    "Hobbies - reading, film, music"
   ];
 
   // Pics should have 0.665 aspect ratio

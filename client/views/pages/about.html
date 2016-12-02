@@ -7,7 +7,7 @@
   <div class="welcome-section">
     <div class="long-about">
       <div class="about-pics">
-        <img ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" ng-if="pic.index==about.selected">
+        <img preload-image ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" ng-if="pic.index==about.selected">
       </div>
       <p ng-repeat="para in about.longAbout">{{para}}</p>
       <div style="clear:both"></div>
