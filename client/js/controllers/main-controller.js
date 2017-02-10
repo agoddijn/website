@@ -18,7 +18,8 @@ app.controller('MainController', ['$location', 'AboutData', 'LoginService', func
   vm.navItems = [
     {name: "jobs", url: "/jobs"},
     {name: "projects", url: "/projects"},
-    {name: "blogs", url: "/blogs"}
+    {name: "blogs", url: "/blogs"},
+    {name: "Resume", url: "/resume"}
   ];
 
   vm.linkIcons = [

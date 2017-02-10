@@ -37,6 +37,12 @@ angular.module('routes', ['ngRoute'])
       templateUrl : 'views/pages/login.html',
       controller : 'LoginController',
       controllerAs : 'login'
+    })
+
+    .when('/resume', {
+      templateUrl : 'views/pages/resume.html',
+      controller : 'ResumeController',
+      controllerAs : 'resume'
     });
 
   $locationProvider.html5Mode(true);

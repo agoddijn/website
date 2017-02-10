@@ -9,6 +9,7 @@ var path      = require('path');
 var mandrill  = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill(config.mandrillApi);
 var favicon = require('serve-favicon');
+var fs = require('fs');
 
 // Set up morgan to log HTTP requests
 app.use(morgan('dev'));
@@ -52,7 +53,7 @@ app.get('/blog/:name', function(req, res) {
   var name = req.params.name;
   var toSend = require(path.resolve('./data/blogs/' + name + '.js'));
   res.send(toSend);
-})
+});
 
 //Log requests
 app.use(function (req, res, next) {
