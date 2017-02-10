@@ -555,3 +555,13 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   background-color: white;
   margin-top: -5px;
 }
+
+/* ------------ */
+/* Resume stuff */
+/* ------------ */
+
+#resume, #resume embed {
+  height: 105%;
+  width: 100%;
+  overflow: none;
+}
