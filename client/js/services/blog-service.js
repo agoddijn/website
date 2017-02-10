@@ -1,7 +1,7 @@
 app.factory('BlogData', ['$http', '$q', function($http, $q) {
 
   var svc = {
-    names: ["first","introduction","donotdisturb"], //File names
+    names: [], //File names without .js
     blogs: [],
     getBlogs: getBlogs
   }
