@@ -446,7 +446,8 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 .about-pics {
   width: 300px;
   height: 200px;
-  margin: 1em;
+  margin: auto;
+  margin-top: 1em;
 }
 
 .about-pic {
