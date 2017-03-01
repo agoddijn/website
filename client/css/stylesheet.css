@@ -88,6 +88,11 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
   .about-pics {
     display: none;
   }
+  .long-about {
+    -webkit-column-count: 1 !important; /* Chrome, Safari, Opera */
+    -moz-column-count: 1 !important; /* Firefox */
+    column-count: 1 !important;
+  }
 }
 
 .injected {
@@ -408,12 +413,18 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 /* ---------------- */
 
 .about {
-  padding: 20px 20px 20px 20px !important;
+  padding: 20px 10% 20px 10% !important;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
 .long-about {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 100px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 100px; /* Firefox */
+  column-gap: 50px;
 }
 
 .welcome-section {
@@ -433,18 +444,13 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 }
 
 .about-pics {
-  position: relative;
-  float: right;
   width: 300px;
   height: 200px;
-  top: 0px;
-  right: 0px;
-  margin-left: 1em;
-  margin-bottom: 1em;
-  margin-right: 1em;
+  margin: 1em;
 }
 
 .about-pic {
+  opacity: 1;
   position: absolute;
   max-height: 100%;
   max-width: 100%;
