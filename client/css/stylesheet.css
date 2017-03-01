@@ -503,7 +503,9 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 
 .blog-entrance {
   border-bottom: 2px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .blog-title-container {
