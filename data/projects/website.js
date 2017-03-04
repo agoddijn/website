@@ -82,7 +82,7 @@ module.exports = {
       },
       {
         header: "Design",
-        descriptionAbove: "The design kind of happened by accident. I am no CSS guru, and don't know the first thing about good frontend design. I did however have a vision of a very clean and simple interface that was easy to navigate without too much clutter. I hate clutter on other websites, it detracts from the experience of the content and adheres to trends of imformation bombardment which I am against. I knew what general layout I wanted, and so after a while the design sort of took shape on its own, and it's a product I am fairly happy with.",
+        descriptionAbove: "The design kind of happened by accident. I am no CSS guru, and don't know the first thing about good frontend design. I did however have a vision of a very clean and simple interface that was easy to navigate without too much clutter. I knew what general layout I wanted, and so after a while the design sort of took shape on its own, and it's a product I am fairly happy with.",
         descriptionBelow: "",
         additional: []
       },

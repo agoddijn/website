@@ -16,7 +16,10 @@ app.use(morgan('dev'));
 
 // Set up mongo database
 mongoose.connect(config.database, function(error){
-  if (error) console.error(error);
+  if (error) {
+    console.error("Could not connect to mongo database");
+    console.error(error);
+  }
   else console.log('mongo connected');
 });
 
@@ -25,7 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Server favicon
-app.use(favicon(path.resolve('./client/content/images/logos/website-brand.png')));
+app.use(favicon(path.resolve('./client/content/images/logos/website-favicon.png')));
 
 //Serve static files
 app.use(express.static(path.resolve('./client')));
