@@ -1,6 +1,6 @@
 module.exports = {
     title: "YouTube",
-    icon: "/content/images/logos/YouTube.png",
+    icon: "/images/logos/YouTube.png",
     video: "https://www.youtube.com/channel/UCU6lCeBsZp-aWJ6_ymRncBw",
     descriptionShort: "A YouTube channel on which I have posted tutorial videos",
     sections: [

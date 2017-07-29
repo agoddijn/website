@@ -25,14 +25,14 @@ app.controller('ProjectController', ['ProjectData', '$uibModal', '$scope', funct
 
 }]);
 
-app.controller('ProjectModalController', ['$modalInstance', 'selected', function($modalInstance, selected) {
+app.controller('ProjectModalController', ['$uibModalInstance', 'selected', function($uibModalInstance, selected) {
 
   var vm = this;
   vm.project = selected;
   vm.interval = 10000; //ms
   vm.noWrapSlide = false;
   vm.close = function() {
-    $modalInstance.dismiss('cancel');
+      $uibModalInstance.dismiss('cancel');
   };
 
 }]);

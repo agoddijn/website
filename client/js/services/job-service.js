@@ -1,7 +1,7 @@
 app.factory('JobData', ['$http', '$q', function($http, $q) {
 
   var svc = {
-    names: ["tomtom", "axiomzen"],
+    names: ["tomtom", "axiomzen", "autonomos"],
     jobs: [],
     getJobs: getJobs
   };

@@ -1,8 +1,8 @@
-var path = "/content/images/jobs/routific/";
+var path = "/images/jobs/routific/";
 
 module.exports = {
     name: "AxiomZen",
-    logo: "/content/images/logos/AxiomZen.png",
+    logo: "/images/logos/AxiomZen.png",
     positions: [
       {
         name: "Software Engineer",

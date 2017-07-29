@@ -1,14 +1,14 @@
-var path = "/content/images/projects/website/";
+var path = "/images/projects/website/";
 
 module.exports = {
     title: "Website",
-    icon: "/content/images/logos/website-brand.png",
+    icon: "/images/logos/website-brand.png",
     github: "https://github.com/agoddijn/website",
     descriptionShort: "Portfolio website designed from scratch using MEAN stack technology",
     sections: [
       {
         header: "Introduction",
-        descriptionAbove: "This website was initally intended to be a portfolio where I could showcase myself and my achievements to potential employers. I think it still serves this purpose, but now, the design of the website is also in itself a demonstration of my design values. I have tried to make this website as scalable, and data driven as possible, choosing to keep only the formatting instructions on the frontend and all the data on the backend. This makes for a fairly lightweight frontend which only calls data to be displayed when it is needed.",
+        descriptionAbove: "This website was initially intended to be a portfolio where I could showcase myself and my achievements to potential employers. I think it still serves this purpose, but now, the design of the website is also in itself a demonstration of my design values. I have tried to make this website as scalable, and data driven as possible, choosing to keep only the formatting instructions on the frontend and all the data on the backend. This makes for a fairly lightweight frontend which only calls data to be displayed when it is needed.",
         descriptionBelow: "This also makes for a completely scalable website that could be used as a boilerplate for other website implementations. All you have to do is change the data, and everything will be correctly formatted",
         additional: [
           {

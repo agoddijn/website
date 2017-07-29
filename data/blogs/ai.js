@@ -1,4 +1,4 @@
-var path = "/content/images/blogs/";
+var path = "/images/blogs/";
 
 module.exports = {
   id: 2,
