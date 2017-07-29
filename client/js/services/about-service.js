@@ -17,14 +17,14 @@ app.service('AboutData', function(){
 
   // Pics should have 0.665 aspect ratio
   var pics = [
-    "../content/images/about/water_polo.jpg",
-    "../content/images/about/family.jpg",
-    "../content/images/about/climbing.jpg",
-    "../content/images/about/sailing.jpg",
-    "../content/images/about/mtb.gif",
-    "../content/images/about/family2.jpg",
-    "../content/images/about/kitesurfing.jpg",
-    "../content/images/about/venice.jpg"
+    "/images/about/water_polo.jpg",
+    "/images/about/family.jpg",
+    "/images/about/climbing.jpg",
+    "/images/about/sailing.jpg",
+    "/images/about/mtb.gif",
+    "/images/about/family2.jpg",
+    "/images/about/kitesurfing.jpg",
+    "/images/about/venice.jpg"
 
   ]
 

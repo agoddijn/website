@@ -1,8 +1,7 @@
 <div>
-  <div class="row">
+  <div class="row tilerow">
     <div class="col-md-4" ng-repeat="project in projects.projectList | orderBy:'title'" id="tile">
-      <img src="">
-      <div ng-click="projects.open(project)" id="tile-inner">
+      <div ng-click="projects.open(project)" class="tile-inner">
         <div class="cover">
           <div class="cover-content">
             <i class="fa fa-plus fa-3x"></i>

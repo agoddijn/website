@@ -21,6 +21,8 @@ This website is designed so it can display any necessary data stored on the back
 
 ## Data Structures
 
+Note: For videos, make sure to use a http url rather than a https, and use the youtube embed link, not the watch link
+
 * Job:
   * name: Name of the job
   * logo: Image file of logo

@@ -1,7 +1,7 @@
 app.factory('ProjectData', ['$http', '$q', function($http, $q) {
 
   var svc = {
-    names: ["halp", "website", "youtube"],
+    names: ["halp", "website", "youtube", "ubcInsight", "morseToSpeech"],
     projects: [],
     getProjects: getProjects
   }

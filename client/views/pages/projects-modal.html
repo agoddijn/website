@@ -14,7 +14,7 @@
       <uib-slide class="carousel-slide" ng-repeat="content in section.additional" active="content.active">
         <img ng-if="content.type == 'image'" class="carousel-image" src="{{content.content}}">
         <pre ng-if="content.type == 'code'" class="prettyprint" pretty-print>
-          {{content.type}}
+          {{content.content}}
         </pre>
         <iframe ng-if="content.type == 'video'" ng-src="{{content.content}}" width="544" height="306" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </uib-slide>

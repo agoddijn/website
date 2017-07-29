@@ -24,14 +24,14 @@ app.controller('JobController', ['$scope', 'JobData', '$uibModal', function($sco
 
 }]);
 
-app.controller('JobModalController', ['$modalInstance', 'selected', function($modalInstance, selected) {
+app.controller('JobModalController', ['$uibModalInstance', 'selected', function($uibModalInstance, selected) {
 
   var vm = this;
   vm.job = selected;
   vm.interval = 10000; //ms
   vm.noWrapSlide = false;
   vm.close = function() {
-    $modalInstance.dismiss('cancel');
+      $uibModalInstance.dismiss('cancel');
   };
 
 }]);

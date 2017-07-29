@@ -23,7 +23,7 @@ app.controller('MainController', ['$location', 'AboutData', 'LoginService', func
   ];
 
   vm.linkIcons = [
-    {icon: "fa fa-facebook fa-lg", link: "https://www.facebook.com/alex.goddijn"},
+    {icon: "fa fa-facebook fa-lg", link: "https://www.facebook.com/aquafreshh"},
     {icon: "fa fa-instagram fa-lg", link: "https://instagram.com/itakepicturesalex/"},
     {icon: "fa fa-linkedin fa-lg", link: "https://ca.linkedin.com/pub/alex-goddijn/b3/11a/633"},
     {icon: "fa fa-github fa-lg", link: "https://github.com/agoddijn"},
