@@ -1,6 +1,6 @@
 <div>
-    <div class="col-md-4" ng-repeat="instance in tiles.dataList | orderBy:'name'" id="tile">
-        <div ng-click="tile.open(instance)" class="tile-inner">
+    <div class="col-md-4 tile" ng-repeat="instance in tiles.dataList | orderBy:'name'">
+        <div ng-click="tiles.open(instance)" class="tile-inner">
             <div class="cover">
                 <div class="cover-content">
                     <i class="fa fa-plus fa-3x"></i>
@@ -8,7 +8,7 @@
                     <a ng-if="instance.video != null" class="tile-link" href="{{project.video}}" target="_blank">View Video</a>
                 </div>
             </div>
-            <div class="logo icon">
+            <div class="logo">
                 <img src="{{instance.icon}}">
             </div>
             <div ng-if="tiles.type === 'project'" class="descriptionShort">

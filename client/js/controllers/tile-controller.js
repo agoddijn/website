@@ -7,7 +7,7 @@ app.controller('TileController', ['Data', '$uibModal', '$scope', '$location', fu
     vm.dataList = [];
 
     openProject = function(project) {
-        openData("project-modal.html", project);
+        openData("projects-modal.html", project);
     };
 
     openJob = function(job) {

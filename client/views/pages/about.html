@@ -25,9 +25,8 @@
     </div>
     <div class="col-md-6">
       <div class="about-pics">
-        <img preload-image ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" ng-if="pic.index==about.selected">
+        <img preload-image ng-repeat="pic in about.pics" ng-src="{{pic.url}}" class="about-pic" ng-if="pic.index==about.selected && width > resize_width">
       </div>
     </div>
   </div>
-
 </div>

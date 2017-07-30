@@ -27,6 +27,7 @@
     <script type="text/javascript" src="../js/directives/prettyPrintDir.js"></script>
     <script type="text/javascript" src="../js/directives/backImg.js"></script>
     <script type="text/javascript" src="../js/directives/blogHeight.js"></script>
+    <script type="text/javascript" src="../js/directives/windowWidth.js"></script>
     <script type="text/javascript" src="/additional/prettify/google-code-prettify/prettify.js"></script>
     <script type="text/javascript" src="/additional/preload/angular-preload-image.min.js"></script>
     <script type="text/javascript" src="../js/services/about-service.js"></script>
@@ -91,10 +92,10 @@
 </nav>
 
 <!-- Main content -->
-<main class="main-content">
+<main window-width class="main-content">
 
     <!-- Profile -->
-    <section class="col-md-3 profile">
+    <section ng-if="width > resize_width" class="col-md-3 profile">
 
         <!-- Avatar -->
         <div class="avatar">
@@ -127,7 +128,7 @@
     </section>
 
     <!-- Injected views -->
-    <section class="col-md-9 injected" ng-view></section>
+    <section class="injected" ng-class="width > resize_width? col-md-9 : col-md-12" ng-view></section>
 
 </main>
 

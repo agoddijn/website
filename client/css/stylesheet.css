@@ -81,13 +81,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     padding: 1em 1em 1em 2em;
 }
 
-@media (max-width: 991px) {
-    .profile {
-        display: none;
-    }
-    .about-pics {
-        display: none;
-    }
+@media (max-width: 1024px) {
     .long-about {
         -webkit-column-count: 1 !important; /* Chrome, Safari, Opera */
         -moz-column-count: 1 !important; /* Firefox */
@@ -160,26 +154,23 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 /* Tile stuff */
 /* ---------- */
 
-.tilerow {
-    height: 30vh;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-#tile {
-    padding: 10px;
-    height: 100%;
+.tile {
+    padding: 20px;
+    height: 250px;
 }
 
 .tile-inner {
     border: 2px solid black;
+    border-radius: 20px;
     text-align: center;
-    max-width: 80%;
-    height: 210px;
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
-.tile-inner > .cover {
+.cover {
     position: relative;
+    border-radius: 18px;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -189,13 +180,13 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     transition: all ease .5s;
 }
 
-.tile-inner > .cover:hover {
+.cover:hover {
     opacity: 0.8;
 }
 
 .cover-content {
     position: absolute;
-    top: 50%;
+    top: 45%;
     width: 100%;
     height: 20px;
     margin-top: -12px;
@@ -203,40 +194,41 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     color: white;
 }
 
-.tile-inner > .title {
+.title {
     display: inline;
 }
 
-.tile-inner > .logo > img {
+.logo img {
     display: inline;
     max-width: 80%;
     height: 100px;
 }
 
-.tile-inner > .icon {
-    margin-top: -21vh;
+.logo {
+    margin-top: -180px;
     margin-bottom: 20px;
 }
 
-.tile-inner > .descriptionShort {
+.descriptionShort {
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .tile-link {
-    border: 3px solid black;
-    background-color: white;
+    border: 3px solid white;
+    background-color: black;
     display: block;
     margin: auto;
     margin-top: 10px;
     padding: 3px 3px 3px 3px;
     width: 60%;
-    color: black;
+    color: white !important;
     text-decoration: none;
 }
 
-.github-link-tile:hover {
-    color: black;
+.tile-link:hover {
+    background-color: white;
+    color: black !important;
 }
 
 /* --------------- */
