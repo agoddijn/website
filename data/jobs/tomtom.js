@@ -6,7 +6,7 @@ var kmeans = require(codePath + "kmeans.js");
 
 module.exports = {
     name: "TomTom",
-    logo: "/images/logos/TomTom.png",
+    icon: "/images/logos/TomTom.png",
     positions: [
         {
             name: "Software Engineer",

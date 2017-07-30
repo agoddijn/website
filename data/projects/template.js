@@ -1,7 +1,7 @@
 var path = "/images/projects/";
 
 module.exports = {
-  title: "",
+  name: "",
   icon: "",
   github: "",
   video: "",

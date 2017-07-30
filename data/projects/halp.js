@@ -6,7 +6,7 @@ var movement = require(codePath + "movement.js");
 var pid = require(codePath + "pid.js");
 
 module.exports =  {
-    title: "H.A.L.P",
+    name: "H.A.L.P",
     icon: "/images/logos/HALP.png",
     descriptionShort: "Robot designed and built from scratch for a competition",
     video: "http://globalnews.ca/video/rd/500078659591/",

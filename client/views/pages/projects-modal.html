@@ -1,12 +1,12 @@
 <div class="modal-header">
   <h3 class="modal-title">
-    {{modalCtrl.project.title}}
-    <div class="modal-icon"><img src="{{modalCtrl.project.icon}}"></div>
+    {{modalCtrl.data.title}}
+    <div class="modal-icon"><img src="{{modalCtrl.data.icon}}"></div>
     <button type="button" class="close" id="modal-close" ng-click="modalCtrl.close()" aria-label="Close"><i class="fa fa-times fa-4"></i></button>
   </h3>
 </div>
 <div class="modal-body">
-  <div class="project-section" ng-repeat="section in modalCtrl.project.sections">
+  <div class="project-section" ng-repeat="section in modalCtrl.data.sections">
     <h2>{{section.header}}</h2>
     <p class="content-description" ng-bind-html="section.descriptionAbove" ng-show="section.descriptionAbove"></p>
     <!-- Carousel -->

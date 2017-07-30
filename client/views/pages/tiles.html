@@ -1,0 +1,22 @@
+<div>
+    <div class="col-md-4" ng-repeat="instance in tiles.dataList | orderBy:'name'" id="tile">
+        <div ng-click="tile.open(instance)" class="tile-inner">
+            <div class="cover">
+                <div class="cover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                    <a ng-if="instance.github != null" class="tile-link" href="{{instance.github}}" target="_blank">View on GitHub</a>
+                    <a ng-if="instance.video != null" class="tile-link" href="{{project.video}}" target="_blank">View Video</a>
+                </div>
+            </div>
+            <div class="logo icon">
+                <img src="{{instance.icon}}">
+            </div>
+            <div ng-if="tiles.type === 'project'" class="descriptionShort">
+                <p>{{instance.descriptionShort}}</p>
+            </div>
+            <div ng-if="tiles.type === 'job'" class="title">
+                <h1>{{instance.name}}</h1>
+            </div>
+        </div>
+    </div>
+</div>

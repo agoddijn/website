@@ -2,7 +2,7 @@ var path = "/images/jobs/routific/";
 
 module.exports = {
     name: "AxiomZen",
-    logo: "/images/logos/AxiomZen.png",
+    icon: "/images/logos/AxiomZen.png",
     positions: [
       {
         name: "Software Engineer",

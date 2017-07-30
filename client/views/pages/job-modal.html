@@ -1,12 +1,12 @@
 <div class="modal-header">
     <h3 class="modal-title">
-        {{modalCtrl.job.name}}
-        <div class="modal-icon"><img src="{{modalCtrl.job.logo}}"></div>
+        {{modalCtrl.data.name}}
+        <div class="modal-icon"><img src="{{modalCtrl.data.logo}}"></div>
         <button type="button" class="close" id="modal-close" ng-click="modalCtrl.close()" aria-label="Close"><i class="fa fa-times fa-4"></i></button>
     </h3>
 </div>
 <div class="modal-body">
-    <div ng-repeat="position in modalCtrl.job.positions">
+    <div ng-repeat="position in modalCtrl.data.positions">
         <h2>{{position.name}}</h2>
         <p class="content-description" ng-bind-html="position.descriptionAbove" ng-show="position.descriptionAbove"></p>
         <!-- Carousel -->

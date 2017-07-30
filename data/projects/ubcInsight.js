@@ -8,7 +8,7 @@ var queryConstructor = require(codePath + "queryConstructor.js");
 var scheduler = require(codePath + "scheduler.js");
 
 module.exports = {
-  title: "UBC Insight",
+  name: "UBC Insight",
   icon: "/images/logos/ubcInsightLogo.png",
   github: "https://github.com/agoddijn/cs310Project",
   descriptionShort: "Queryable database project with GUI",

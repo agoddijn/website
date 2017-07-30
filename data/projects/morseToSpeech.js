@@ -7,7 +7,7 @@ var uart = require(codePath + "uart.js");
 var mainControl = require(codePath + "mainControl.js");
 
 module.exports = {
-    title: "Morse to Speech",
+    name: "Morse to Speech",
     icon: "/images/logos/morseToSpeechlogo.png",
     github: "https://github.com/agoddijn/morseToSpeech",
     descriptionShort: "A microprocessor application to convert Morse code to speech",

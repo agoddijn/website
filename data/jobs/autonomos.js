@@ -2,7 +2,7 @@ var path = "/images/jobs/autonomos/";
 
 module.exports = {
     name: "Autonomos",
-    logo: "/images/logos/autonomos.png",
+    icon: "/images/logos/autonomos.png",
     positions: [
         {
             name: "Software Engineer",

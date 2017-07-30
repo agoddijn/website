@@ -4,15 +4,15 @@ angular.module('routes', ['ngRoute'])
   $routeProvider
 
     .when('/projects', {
-      templateUrl : '/views/pages/projects.html',
-      controller : 'ProjectController',
-      controllerAs : 'projects'
+      templateUrl : '/views/pages/tiles.html',
+      controller : 'TileController',
+      controllerAs : 'tiles'
     })
 
     .when('/jobs', {
-      templateUrl : '/views/pages/jobs.html',
-      controller : 'JobController',
-      controllerAs : 'jobs'
+      templateUrl : '/views/pages/tiles.html',
+      controller : 'TileController',
+      controllerAs : 'tiles'
     })
 
     .when('/blogs', {

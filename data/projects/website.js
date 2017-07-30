@@ -1,7 +1,7 @@
 var path = "/images/projects/website/";
 
 module.exports = {
-    title: "Website",
+    name: "Website",
     icon: "/images/logos/website-brand.png",
     github: "https://github.com/agoddijn/website",
     descriptionShort: "Portfolio website designed from scratch using MEAN stack technology",

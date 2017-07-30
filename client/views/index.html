@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta charset="utf-8">
@@ -37,10 +37,8 @@
     <script type="text/javascript" src="../js/controllers/login-controller.js"></script>
     <script type="text/javascript" src="../js/services/blog-service.js"></script>
     <script type="text/javascript" src="../js/controllers/blog-controller.js"></script>
-    <script type="text/javascript" src="../js/services/job-service.js"></script>
-    <script type="text/javascript" src="../js/controllers/job-controller.js"></script>
-    <script type="text/javascript" src="../js/services/project-service.js"></script>
-    <script type="text/javascript" src="../js/controllers/project-controller.js"></script>
+    <script type="text/javascript" src="../js/services/data-service.js"></script>
+    <script type="text/javascript" src="../js/controllers/tile-controller.js"></script>
     <script type="text/javascript" src="../js/controllers/resume-controller.js"></script>
 
     <!-- CSS and stylesheets -->
@@ -50,88 +48,88 @@
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 
-  </head>
+</head>
 
-  <body class="container" ng-app="app" ng-controller="MainController as main">
+<body class="container" ng-app="app" ng-controller="MainController as main">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
 
-      <div class="container">
+    <div class="container">
 
         <!-- Header and toggle grouped for mobile view -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" ng-click="main.isCollapsed = !main.isCollapsed">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/" id="site-name"> <img src="/images/logos/website-brand.png" id="brand"> Alex Goddijn</a>
+            <button type="button" class="navbar-toggle" ng-click="main.isCollapsed = !main.isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" id="site-name"> <img src="/images/logos/website-brand.png" id="brand"> Alex Goddijn</a>
         </div>
 
         <!-- Nav links -->
         <div class="navbar-collapse" uib-collapse="main.isCollapsed">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="hidden">
-              <a href="/"></a>
-            </li>
-            <li ng-repeat="navItem in main.navItems" class="navbar-link" ng-class="main.isActive(navItem)" ng-click="main.checkCollapsed()">
-              <a href="{{navItem.url}}">{{navItem.name}}</a>
-            </li>
-            <!-- <li class="navbar-link" ng-class="main.isActive({name: 'login', url: '/login'})" ng-hide="main.isLoggedIn()" ng-click="main.checkCollapsed()">
-              <a href="/login">login</a>
-            </li>
-            <li ng-show="main.isLoggedIn()" class="navbar-link" ng-click="main.checkCollapsed()">
-              <a ng-click="main.logout()"><b>{{main.getUser().username}}</b> | Logout</a>
-            </li> -->
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="/"></a>
+                </li>
+                <li ng-repeat="navItem in main.navItems" class="navbar-link" ng-class="main.isActive(navItem)" ng-click="main.checkCollapsed()">
+                    <a href="{{navItem.url}}">{{navItem.name}}</a>
+                </li>
+                <!-- <li class="navbar-link" ng-class="main.isActive({name: 'login', url: '/login'})" ng-hide="main.isLoggedIn()" ng-click="main.checkCollapsed()">
+                  <a href="/login">login</a>
+                </li>
+                <li ng-show="main.isLoggedIn()" class="navbar-link" ng-click="main.checkCollapsed()">
+                  <a ng-click="main.logout()"><b>{{main.getUser().username}}</b> | Logout</a>
+                </li> -->
+            </ul>
         </div>
-`
-      </div>
+        `
+    </div>
 
-    </nav>
+</nav>
 
-    <!-- Main content -->
-    <main class="main-content">
+<!-- Main content -->
+<main class="main-content">
 
-      <!-- Profile -->
-      <section class="col-md-3 profile">
+    <!-- Profile -->
+    <section class="col-md-3 profile">
 
         <!-- Avatar -->
         <div class="avatar">
-          <a href="/">
-            <img src="/images/Profile2.png">
-          </a>
+            <a href="/">
+                <img src="/images/Profile2.png">
+            </a>
         </div>
 
         <!-- Profile Icons -->
         <div class="profile-icons">
-          <ul>
-            <li ng-repeat="link in main.linkIcons">
-              <a target="_blank" href="{{link.link}}">
-                <i class="{{link.icon}}"></i>
-              </a>
-            </li>
-          </ul>
+            <ul>
+                <li ng-repeat="link in main.linkIcons">
+                    <a target="_blank" href="{{link.link}}">
+                        <i class="{{link.icon}}"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <!-- Short description -->
         <div class="profile-description">
-          <p>{{main.shortAbout}}</p>
+            <p>{{main.shortAbout}}</p>
         </div>
 
         <!-- Contact button -->
         <div class="contact" ng-controller="ContactController as contact">
-          <button type="button" ng-click="contact.open()">Contact</button>
+            <button type="button" ng-click="contact.open()">Contact</button>
         </div>
 
-      </section>
+    </section>
 
-      <!-- Injected views -->
-      <section class="col-md-9 injected" ng-view></section>
+    <!-- Injected views -->
+    <section class="col-md-9 injected" ng-view></section>
 
-    </main>
+</main>
 
-  </body>
+</body>
 </html>
