@@ -2,7 +2,7 @@
 app.controller('MainController', ['$location', 'AboutData', 'LoginService', '$scope', function($location, AboutData, LoginService, $scope) {
     var vm = this;
 
-    $scope.resize_width = 1024;
+    vm.resize_width = 1024;
 
     vm.shortAbout = AboutData.s;
     vm.isCollapsed = true;

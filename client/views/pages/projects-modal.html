@@ -1,4 +1,4 @@
-<div class="modal-header">
+<div window-width class="modal-header">
   <h3 class="modal-title">
     {{modalCtrl.data.title}}
     <div class="modal-icon"><img src="{{modalCtrl.data.icon}}"></div>
@@ -8,7 +8,7 @@
 <div class="modal-body">
   <div class="project-section" ng-repeat="section in modalCtrl.data.sections">
     <h2>{{section.header}}</h2>
-    <p class="content-description" ng-bind-html="section.descriptionAbove" ng-show="section.descriptionAbove"></p>
+    <p class="content-description" ng-class="(width > modalCtrl.resize_width) ? 'double-column' : single-column" ng-bind-html="section.descriptionAbove" ng-show="section.descriptionAbove"></p>
     <!-- Carousel -->
     <uib-carousel class="carousel" interval="modalCtrl.interval" no-wrap="modalCtrl.noWrapSlide" ng-hide="section.additional.length == 0">
       <uib-slide class="carousel-slide" ng-repeat="content in section.additional" active="content.active">
@@ -23,6 +23,6 @@
       <p>{{content.caption}}</p>
     </div>
     <!-- End Carousel -->
-    <p class="content-description" ng-bind-html="section.descriptionBelow" ng-show="section.descriptionBelow"></p>
+    <p class="content-description" ng-class="(width > modalCtrl.resize_width) ? 'double-column' : 'single-column'" ng-bind-html="section.descriptionBelow" ng-show="section.descriptionBelow"></p>
   </div>
 </div>

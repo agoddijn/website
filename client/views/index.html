@@ -95,7 +95,7 @@
 <main window-width class="main-content">
 
     <!-- Profile -->
-    <section ng-if="width > resize_width" class="col-md-3 profile">
+    <section ng-if="width > main.resize_width" class="col-md-3 profile">
 
         <!-- Avatar -->
         <div class="avatar">
@@ -128,7 +128,7 @@
     </section>
 
     <!-- Injected views -->
-    <section class="injected" ng-class="width > resize_width? col-md-9 : col-md-12" ng-view></section>
+    <section class="injected" ng-class="width > main.resize_width? col-md-9 : col-md-12" ng-view></section>
 
 </main>
 

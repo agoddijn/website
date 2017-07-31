@@ -13,7 +13,6 @@ app.directive('windowWidth', ['$window', function ($window) {
         scope.width = $window.innerWidth;
 
         function onResize(){
-            console.log($window.innerWidth);
             // uncomment for only fire when $window.innerWidth change
             if (scope.width !== $window.innerWidth)
             {

@@ -53,6 +53,7 @@ app.controller('TileController', ['Data', '$uibModal', '$scope', '$location', fu
 app.controller('ModalController', ['$uibModalInstance', 'selected', function($uibModalInstance, selected) {
 
     var vm = this;
+    vm.resize_width = 1024;
     vm.data = selected;
     vm.interval = 10000; //ms
     vm.noWrapSlide = false;

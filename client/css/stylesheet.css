@@ -81,13 +81,28 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     padding: 1em 1em 1em 2em;
 }
 
-@media (max-width: 1024px) {
-    .long-about {
-        -webkit-column-count: 1 !important; /* Chrome, Safari, Opera */
-        -moz-column-count: 1 !important; /* Firefox */
-        column-count: 1 !important;
-    }
+.double-column {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 50px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 50px; /* Firefox */
+    column-gap: 50px;
 }
+
+.single-columnm {
+    -webkit-column-count: 1 !important; /* Chrome, Safari, Opera */
+    -moz-column-count: 1 !important; /* Firefox */
+    column-count: 1 !important;
+}
+
+/*@media (max-width: 1024px) {*/
+    /*.long-about {*/
+        /*-webkit-column-count: 1 !important; !* Chrome, Safari, Opera *!*/
+        /*-moz-column-count: 1 !important; !* Firefox *!*/
+        /*column-count: 1 !important;*/
+    /*}*/
+/*}*/
 
 .injected {
     height: 100vh;
@@ -292,12 +307,6 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 .content-description {
     padding: 10px 50px 10px 50px;
     text-indent: 20px;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 50px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 50px; /* Firefox */
-    column-gap: 50px;
 }
 
 .caption {
@@ -417,15 +426,6 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     padding: 20px 10% 20px 10% !important;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-}
-
-.long-about {
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    -webkit-column-gap: 50px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 50px; /* Firefox */
-    column-gap: 50px;
 }
 
 .welcome-section {
