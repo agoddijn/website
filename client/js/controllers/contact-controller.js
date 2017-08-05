@@ -9,7 +9,7 @@ app.controller('ContactController', ['$uibModal', function($uibModal) {
       animation: true,
       templateUrl: "../views/pages/contact-modal.html",
       controller: "ContactModalController",
-      controllerAs: "contact",
+      controllerAs: "contact"
     });
   };
 

@@ -11,7 +11,7 @@ module.exports = {
   name: "UBC Insight",
   icon: "/images/logos/ubcInsightLogo.png",
   github: "https://github.com/agoddijn/cs310Project",
-  descriptionShort: "Queryable database project with GUI",
+  descriptionShort: "Node web app for database interaction, both front and back end",
   sections: [
     {
       header: "Introduction",
@@ -42,8 +42,8 @@ module.exports = {
     },
     {
       header: "Challenges",
-      descriptionAbove: "Working in a group was a challenge. I have worked in software teams before, but usually with coworkers who are motivated and engaged in the problem. I felt that my partner in this group was not particularly motivated by this project, which created a difficult dynamic and put me in a position where I had to push her. I had not been in this position before, and I learnt a lot about motivating others. As for the technical challenges, what I found most difficult, and what I think the course strives to teach, was creating a scalable and solid software system. There were several big refactors I had to make, and I did not entirely agree with some of the specifications given to us (as I felt it encroached on our choice of implementation) but working around these obstacles was eye opening. It was easy to see which design choices had a positive impact and which had a negative one as the project grew larger.",
-      descriptionBelow: "Overall I was happy with end product. I felt like the code was well structured, followed good design principles, and in the end that demonstrated itself in our ability to add, change, and refactor code with relative ease. The vast majority of the implementation was my own, and so I had to write efficiently so as not to fall behind schedule. In the end we consistently received a grade above 95% in all of our sprints. The GUI also felt clean and worked well during our demonstration of the final product.",
+      descriptionAbove: "Working in a group was a challenge. I have worked in software teams before, but usually with coworkers who are motivated and engaged in the problem. I felt that my partner in this group was not particularly motivated by this project, which created a difficult dynamic and put me in a position where I had to push her. I had not been in this position before, and I learnt a lot about motivating others. As for the technical challenges, what I found most difficult, and what I think the course strives to teach, was creating a scalable and solid software system. There were several big refactors I had to make, and I did not entirely agree with some of the specifications given to us (as I felt it encroached on our choice of implementation) but working around these obstacles was eye opening. It was easy to see which design choices had a positive impact and which had a negative one as the project grew larger. Overall I was happy with end product. I felt like the code was well structured, followed good design principles, and in the end that demonstrated itself in our ability to add, change, and refactor code with relative ease. The vast majority of the implementation was my own, and so I had to write efficiently so as not to fall behind schedule. In the end we consistently received a grade above 95% in all of our sprints. The GUI also felt clean and worked well during our demonstration of the final product.",
+      descriptionBelow: "",
       additional: [
       ]
     },

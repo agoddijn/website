@@ -1,5 +1,5 @@
 //Main controller
-app.controller('MainController', ['$location', 'AboutData', 'LoginService', '$scope', function($location, AboutData, LoginService, $scope) {
+app.controller('MainController', ['$location', 'AboutData', 'LoginService', '$scope', function($location, AboutData, LoginService, $scope, Data, $uibModal) {
     var vm = this;
 
     vm.resize_width = 1024;
@@ -41,6 +41,6 @@ app.controller('MainController', ['$location', 'AboutData', 'LoginService', '$sc
 
     vm.checkCollapsed = function() {
         if(!vm.isCollapsed) vm.isCollapsed = !vm.isCollapsed;
-    }
+    };
 
 }]);

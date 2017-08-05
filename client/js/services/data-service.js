@@ -10,9 +10,9 @@ app.factory('Data', ['$http', '$q', function($http, $q) {
         jobs: [],
         projects: [],
         getJobs: getJobs,
-        getProjects: getProjects
+        getProjects: getProjects,
+        getDataAsync: getDataAsync
     };
-
 
     function getProjects() {
         if (svc.projectNames.length == svc.projects.length) return;
@@ -36,6 +36,10 @@ app.factory('Data', ['$http', '$q', function($http, $q) {
             })
         }
         return data;
+    }
+
+    function getDataAsync(baseUrl, name) {
+        return $http.get(baseUrl + name);
     }
 
     return svc;

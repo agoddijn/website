@@ -154,7 +154,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     padding: 15px 20px 0px 20px;
 }
 
-.contact > button {
+.my-button {
     margin-top: 10px;
     display: inline-block;
     text-align: center;
@@ -165,12 +165,17 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     color: black;
 }
 
+.my-button:hover {
+    color: white;
+    background-color: black;
+}
+
 /* ---------- */
 /* Tile stuff */
 /* ---------- */
 
 .tile {
-    padding: 20px;
+    padding: 20px 2vw;
     height: 250px;
 }
 
@@ -574,3 +579,34 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     height: 105%;
     width: 100%;
 }
+
+/* ---------------- */
+/* Highlights stuff */
+/* ---------------- */
+
+hr {
+    width: 80%;
+}
+
+.highlights {
+    height: 40vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 50px;
+}
+
+.highlight-tile {
+    height: 15vh;
+    width: 15vw;
+    padding: 10px 10px;
+    margin: auto !important;
+}
+
+.highlight-tile .logo > img {
+    height: 60px;
+}
+
+.highlight-tile .logo {
+    margin-top: -9vh;
+}
+

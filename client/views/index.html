@@ -34,6 +34,7 @@
     <script type="text/javascript" src="../js/services/login-service.js"></script>
     <script type="text/javascript" src="../js/controllers/main-controller.js"></script>
     <script type="text/javascript" src="../js/routes.js"></script>
+    <script type="text/javascript" src="../js/controllers/highlight-controller.js"></script>
     <script type="text/javascript" src="../js/controllers/about-controller.js"></script>
     <script type="text/javascript" src="../js/controllers/login-controller.js"></script>
     <script type="text/javascript" src="../js/services/blog-service.js"></script>
@@ -97,32 +98,64 @@
     <!-- Profile -->
     <section ng-if="width > main.resize_width" class="col-md-3 profile">
 
-        <!-- Avatar -->
-        <div class="avatar">
-            <a href="/">
-                <img src="/images/Profile2.png">
-            </a>
+        <div class="profile-top">
+            <!-- Avatar -->
+            <div class="avatar">
+                <a href="/">
+                    <img src="/images/Profile2.png">
+                </a>
+            </div>
+
+            <!-- Profile Icons -->
+            <div class="profile-icons">
+                <ul>
+                    <li ng-repeat="link in main.linkIcons">
+                        <a target="_blank" href="{{link.link}}">
+                            <i class="{{link.icon}}"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Short description -->
+            <div class="profile-description">
+                <p>{{main.shortAbout}}</p>
+            </div>
+
+            <!-- Contact button -->
+            <div class="contact" ng-controller="ContactController as contact">
+                <button class="my-button" type="button" ng-click="contact.open()">Contact</button>
+            </div>
         </div>
 
-        <!-- Profile Icons -->
-        <div class="profile-icons">
-            <ul>
-                <li ng-repeat="link in main.linkIcons">
-                    <a target="_blank" href="{{link.link}}">
-                        <i class="{{link.icon}}"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <hr>
 
-        <!-- Short description -->
-        <div class="profile-description">
-            <p>{{main.shortAbout}}</p>
-        </div>
+        <h3>Highlights</h3>
 
-        <!-- Contact button -->
-        <div class="contact" ng-controller="ContactController as contact">
-            <button type="button" ng-click="contact.open()">Contact</button>
+        <hr>
+
+        <!-- Highlights -->
+        <div class="highlights" ng-controller="HighlightController as highlights">
+            <div class="tile highlight-tile" ng-repeat="instance in highlights.highlights | orderBy: 'name'">
+                <div ng-click="highlights.open(instance)" class="tile-inner">
+                    <div class="cover">
+                        <div class="cover-content" ng-style="{ top: (instance.github != null || instance.video != null) ? '25%' : '45%'}">
+                            <i class="fa fa-plus fa-3x"></i>
+                            <a ng-if="instance.github != null" class="tile-link" href="{{instance.github}}" target="_blank">View on GitHub</a>
+                            <a ng-if="instance.video != null" class="tile-link" href="{{instance.video}}" target="_blank">View Video</a>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <img src="{{instance.icon}}">
+                    </div>
+                    <div ng-if="tiles.type === 'project'" class="descriptionShort">
+                        <p>{{instance.descriptionShort}}</p>
+                    </div>
+                    <div ng-if="tiles.type === 'job'" class="title">
+                        <h1>{{instance.name}}</h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
