@@ -140,12 +140,17 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 
 .profile-icons > ul > li {
     display: inline;
-    padding-left: 7px;
-    padding-right: 7px;
+    padding: 7px;
 }
 
 .profile-icons > ul > li > a {
     color: inherit;
+    text-decoration: none;
+}
+
+.profile-icons > ul > li:hover {
+    background-color: black;
+    color: white;
     text-decoration: none;
 }
 

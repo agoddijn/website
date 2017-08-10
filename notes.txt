@@ -1,5 +1,0 @@
-Data structure for the blog:
-  - Unique ID
-  - Date
-  - Title
-  - Content
