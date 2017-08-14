@@ -64,7 +64,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     color: black;
 }
 
-.nav, .pagination, .carousel, .panel-title a, #tile-inner {
+.nav, .pagination, .carousel, .panel-title a, .tile-inner {
     cursor: pointer;
 }
 
