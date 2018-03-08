@@ -277,6 +277,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     max-height: 80vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    text-align: center;
 }
 
 /* -------------- */
@@ -287,6 +288,8 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     height: 306px;
     margin-top: 10px;
     margin-bottom: 16px;
+    width: 90%;
+    display: inline-block;
 }
 
 .carousel-control {

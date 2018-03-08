@@ -6,7 +6,7 @@ app.factory('Data', ['$http', '$q', function($http, $q) {
 
     var svc = {
         jobNames: ["tomtom", "axiomzen", "autonomos"],
-        projectNames: ["halp", "website", "youtube", "ubcInsight", "morseToSpeech"],
+        projectNames: ["halp", "website", "youtube", "ubcInsight", "morseToSpeech", "uniserve"],
         jobs: [],
         projects: [],
         getJobs: getJobs,
