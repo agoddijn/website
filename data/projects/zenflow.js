@@ -12,7 +12,7 @@ module.exports = {
             additional: [
                 {
                     type: "image",
-                    content: path + "screenshot.png",
+                    content: path + "main.png",
                     caption: "Screenshot of the main app page"
                 }
             ]
