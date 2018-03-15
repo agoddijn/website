@@ -55,7 +55,7 @@ app.controller('ModalController', ['$uibModalInstance', 'selected', function($ui
     var vm = this;
     vm.resize_width = 1024;
     vm.data = selected;
-    vm.noWrapSlide = true;
+    vm.noWrapSlide = false;
     vm.close = function() {
         $uibModalInstance.dismiss('cancel');
     };
