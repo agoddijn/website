@@ -26,7 +26,7 @@ app.controller('MainController', ['$location', 'AboutData', 'LoginService', '$sc
 
     vm.linkIcons = [
         {icon: "fa fa-facebook fa-lg", link: "https://www.facebook.com/aquafreshh"},
-        {icon: "fa fa-instagram fa-lg", link: "https://instagram.com/itakepicturesalex/"},
+        {icon: "fa fa-instagram fa-lg", link: "https://www.instagram.com/alex_goddijn/"},
         {icon: "fa fa-linkedin fa-lg", link: "https://ca.linkedin.com/pub/alex-goddijn/b3/11a/633"},
         {icon: "fa fa-github fa-lg", link: "https://github.com/agoddijn"},
         {icon: "fa fa-youtube fa-lg", link: "https://www.youtube.com/channel/UCU6lCeBsZp-aWJ6_ymRncBw"},
