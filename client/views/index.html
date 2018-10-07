@@ -129,30 +129,31 @@
         </div>
 
         <hr>
-
-        <h3>Highlights</h3>
-
+            <h3>Highlights</h3>
         <hr>
 
         <!-- Highlights -->
-        <div class="highlights" ng-controller="HighlightController as highlights">
-            <div class="tile highlight-tile" ng-repeat="instance in highlights.highlights | orderBy: 'name'">
-                <div ng-click="highlights.open(instance)" class="tile-inner">
-                    <div class="cover">
-                        <div class="cover-content" ng-style="{ top: (instance.github != null || instance.video != null) ? '25%' : '45%'}">
-                            <i class="fa fa-plus fa-3x"></i>
-                            <a ng-if="instance.github != null" class="tile-link" href="{{instance.github}}" target="_blank">View on GitHub</a>
-                            <a ng-if="instance.video != null" class="tile-link" href="{{instance.video}}" target="_blank">View Video</a>
+        <div class="div profile-bottom">
+            
+            <div class="highlights" ng-controller="HighlightController as highlights">
+                <div class="tile highlight-tile" ng-repeat="instance in highlights.highlights | orderBy: 'name'">
+                    <div ng-click="highlights.open(instance)" class="tile-inner">
+                        <div class="cover">
+                            <div class="cover-content" ng-style="{ top: (instance.github != null || instance.video != null) ? '25%' : '45%'}">
+                                <i class="fa fa-plus fa-3x"></i>
+                                <a ng-if="instance.github != null" class="tile-link" href="{{instance.github}}" target="_blank">GitHub</a>
+                                <a ng-if="instance.video != null" class="tile-link" href="{{instance.video}}" target="_blank">Video</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="logo">
-                        <img src="{{instance.icon}}">
-                    </div>
-                    <div ng-if="tiles.type === 'project'" class="descriptionShort">
-                        <p>{{instance.descriptionShort}}</p>
-                    </div>
-                    <div ng-if="tiles.type === 'job'" class="title">
-                        <h1>{{instance.name}}</h1>
+                        <div class="logo">
+                            <img src="{{instance.icon}}">
+                        </div>
+                        <div ng-if="tiles.type === 'project'" class="descriptionShort">
+                            <p>{{instance.descriptionShort}}</p>
+                        </div>
+                        <div ng-if="tiles.type === 'job'" class="title">
+                            <h1>{{instance.name}}</h1>
+                        </div>
                     </div>
                 </div>
             </div>

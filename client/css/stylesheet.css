@@ -3,6 +3,10 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 a:hover, a:active{
     text-decoration: none;
 }
@@ -121,6 +125,16 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
     height: 100vh;
     padding: 14px 14px 14px 14px;
     border-right: 2px solid black;
+}
+
+.profile-top {
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.profile-bottom {
+    max-height: 35vh;
+    overflow-y: scroll;
 }
 
 .avatar {
@@ -437,7 +451,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 
 .about {
     padding: 20px 10% 20px 10% !important;
-    overflow-y: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -597,14 +611,14 @@ hr {
 }
 
 .highlights {
-    height: 40vh;
-    overflow-y: scroll;
+    height: 100%;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 50px;
 }
 
 .highlight-tile {
-    height: 15vh;
+    height: 17vh;
     width: 15vw;
     padding: 10px 10px;
     margin: auto !important;
@@ -615,6 +629,5 @@ hr {
 }
 
 .highlight-tile .logo {
-    margin-top: -9vh;
+    margin-top: -11vh;
 }
-
