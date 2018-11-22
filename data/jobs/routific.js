@@ -1,12 +1,12 @@
 var path = "/images/jobs/routific/";
 
 module.exports = {
-    name: "AxiomZen",
-    icon: "/images/logos/AxiomZen.png",
+    name: "Routific",
+    icon: "/images/logos/AxiomZenxRoutific.png",
     positions: [
       {
         name: "Software Engineer",
-        descriptionAbove: "I worked on backend and frontend web design for <a href='https://routific.com/' target='_blank'>Routific</a>, a startup based in Vancouver, providing affordable logistics solutions. It was here that I first learnt web development. My job was to help where I could on the website. This included front end and back end work. On the front end I did some work making the login seamless across the main website and API website. I also did work making a data driven, scalable <a href='https://routific.com/faq' target='_blank'>FAQ page</a>. On the backend I set up some map servers, worked on seamless integration of data on the API website to the backend API, and developed some automation tools to help the developers.",
+        descriptionAbove: "I worked on backend and frontend web design for <a href='https://routific.com/' target='_blank'>Routific</a>, a startup based in Vancouver, providing affordable logistics solutions. We worked under the guidance of startup foundry <a href='https://www.axiomzen.co/' target='_blank'>AxiomZen</a>, who were also responsible for the popular app <a href='https://www.cryptokitties.co/' target='_blank'>CryptoKitties</a>. It was here that I first learnt web development. My job was to help where I could on the website. This included front end and back end work. On the front end I did some work making the login seamless across the main website and API website. I also did work making a data driven, scalable <a href='https://routific.com/faq' target='_blank'>FAQ page</a>. On the backend I set up some map servers, worked on seamless integration of data on the API website to the backend API, and developed some automation tools to help the developers.",
         descriptionBelow: "Having no prior experience working in web development (on the front or back end) this was an extremely challenging internship for me. The interview process alone cost many hours, learning what was necessary to develop a simple Angular application. I thought I would be able to contribute something valuable to the company regardless of my technical skill level due to my intuitive understanding of product, but I learnt that there is a big difference between conceptualizing a product, understanding how it works, and actually implementing it. It requires the right tools and the right team",
         additional: [
           {

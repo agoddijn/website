@@ -1,6 +1,7 @@
 body {
     font-family: Ubuntu, sans-serif;
     overflow-x: hidden;
+    /* overflow: hidden; */
 }
 
 ::-webkit-scrollbar { 
@@ -81,7 +82,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 }
 
 .profile, .injected > div {
-    margin: 0;
+    margin-bottom: 10px;
     padding: 1em 1em 1em 2em;
 }
 
@@ -451,6 +452,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 
 .about {
     padding: 20px 10% 20px 10% !important;
+    margin-bottom: 100px !important;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
