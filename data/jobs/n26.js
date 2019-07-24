@@ -13,7 +13,7 @@ module.exports = {
         },
         {
             name: "Junior Backend Engineer",
-            descriptionAbove: "I will soon be moving on to the role of junior backend engineer",
+            descriptionAbove: "As a backend software engineer I contributed to the card lifecycle service, which integrates with a third party mastercard processor. It is written in Kotlin using functional programming best practices, and deals with a lot ",
             descriptionBelow: "",
             additional: [
             ]
