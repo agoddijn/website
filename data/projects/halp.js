@@ -9,7 +9,7 @@ module.exports =  {
     name: "H.A.L.P",
     icon: "/images/logos/HALP.png",
     descriptionShort: "Robot designed and built from scratch for a competition",
-    video: "http://globalnews.ca/video/rd/500078659591/",
+    video: "http://player.vimeo.com/video/145592816",
     sections: [
         {
             header: "Introduction",
@@ -134,11 +134,6 @@ module.exports =  {
             descriptionAbove: "The final exam for this robot course was a competition. To win, your robot had to get the most number of points (by saving pets) in the shortest amount of time on its own. Any pets saved after intervention by the team did not count. Each pet was worth a different number of points depending on the difficulty. It was an intense competition, in which our team nearly came out on top. Unfortunately, after our robot dropped a pet, we got eliminated from the final but went on to win the match for third place. Although we did not win the competition, the teachers awarded our robot the top mark (out of a group of 15 robots).",
             descriptionBelow: "I would like to thank my team members, Arjun Venkatesh, Bryden Fogelman, and Stefan Sander-Green for the incredible project. Despite the tense moments (such as our robot basically exploding and killing a few fuses on time trial day) and the long, long hours in our sweatbox of a lab, we pulled through an got the top mark in the class, and third in the competition. Well done boys. Also big thanks to our professors who put in many tireless hours into helping us get through.",
             additional: [
-                {
-                    type: "video",
-                    content: "http://globalnews.ca/video/embed/2152578",
-                    caption: "News coverage of competition"
-                },
                 {
                     type: "video",
                     content: "http://player.vimeo.com/video/145592816",

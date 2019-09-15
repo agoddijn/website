@@ -13,7 +13,7 @@ module.exports = {
         },
         {
             name: "Junior Backend Engineer",
-            descriptionAbove: "As a backend software engineer I contributed to the card lifecycle service, which integrates with a third party mastercard processor. It is written in Kotlin using functional programming best practices, and deals with a lot ",
+            descriptionAbove: "As a backend software engineer I contributed to the card lifecycle service, which integrates with a third party mastercard processor. It is written in Kotlin using functional programming best practices. I've learnt a lot about both building scalable applications, and building applications in the contexted of a large distributed system from this project. We migrated this system out of a monolith architecture with the requirement that the current architecture still run wihtout downtime. This meant a lot of migrations with two flows (new and legacy) with data being written to new and legacy systems, and dealing with eventual inconsistency between the various systems. Working with distributed systems has given me an appreciation for robustness and fault tolerence, as well as the various drawbacks and difficulties of having a realtime distributed system",
             descriptionBelow: "",
             additional: [
             ]
