@@ -9,11 +9,15 @@ The following commands should be typed into the terminal or command line
 
 2. Go into the directory and run ``` npm install ```
 
-3. Install mongodb ``` brew install mongodb ``` (need to have homebrew installed) and start the database using ``` mongod ```
+3. Install nodemone ``` npm install -g nodemon ```
 
 4. Run ``` nodemon server.js ```
 
 5. go to ``` http://localhost:3000/ ``` in your browser
+
+## Deploy
+
+CI with Heroku. Will deploy master when you push
 
 ## Design
 

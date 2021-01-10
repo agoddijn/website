@@ -1,5 +1,5 @@
 app.service('AboutData', function(){
-  var shortDescription = "I'm Alexander Goddijn, a French and Dutch national passionate about product and AI, currently a junior software engineer at N26";
+  var shortDescription = "I'm Alexander Goddijn, a French and Dutch national passionate about product and AI, currently a forward deployed engineer at Palantir";
 
   var longDescription = [
     "I was born in Amsterdam, where I spent the first four years of my life before moving to London. I learnt english and spent most of my formative academic years there. During these years I developed an interest in science fiction and physics as a way to understand the world. I either had my nose in a book, or was talking to people about something I'd learnt.",
@@ -10,7 +10,7 @@ app.service('AboutData', function(){
 
   var info = [
     "Fluent in three languages (Dutch, French, English)",
-    "Junior software engineer at N26",
+    "Forward deployed engineer @ Palantir",
     "Extra Curricular - skiing, mountain biking, sailing, climbing, water polo, running, racing"
   ];
 

@@ -533,10 +533,12 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 /* ---------- */
 
 .blog-entrance {
+    margin: auto;
     border-bottom: 2px solid black;
     margin-bottom: 30px;
-    margin-left: 10%;
-    margin-right: 10%;
+
+    max-width: 1000px;
+
 }
 
 .blog-title-container {
