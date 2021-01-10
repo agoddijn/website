@@ -17,7 +17,7 @@ The following commands should be typed into the terminal or command line
 
 ## Deploy
 
-CI with Heroku. Will deploy master when you push
+CI with Heroku. Will deploy master when you push new changes.
 
 ## Design
 
