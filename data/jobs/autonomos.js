@@ -3,6 +3,8 @@ var path = "/images/jobs/autonomos/";
 module.exports = {
     name: "Autonomos",
     icon: "/images/logos/autonomos.png",
+    role: "Software Engineer",
+    dates: "May 2017 - Aug 2017",
     positions: [
         {
             name: "Software Engineer",

@@ -4,6 +4,7 @@ module.exports = {
     name: "Zenflow",
     icon: "/images/logos/zenflow.png",
     descriptionShort: "Geolocation based photo sharing app built for hackathon",
+    dates: "Mar 2015 - Apr 2015",
     sections: [
         {
             header: "Zenflow",

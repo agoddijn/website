@@ -1,11 +1,13 @@
 <div>
-    <div class="col-md-4 tile" ng-repeat="instance in tiles.dataList">
+    <div class="col-md-4 tile" ng-repeat="instance in tiles.dataList track by $index">
         <div ng-click="tiles.open(instance)" class="tile-inner">
             <div class="cover">
                 <div class="cover-content">
                     <i class="fa fa-plus fa-3x"></i>
                     <a ng-if="instance.github != null" class="tile-link" href="{{instance.github}}" target="_blank">View on GitHub</a>
                     <a ng-if="instance.video != null" class="tile-link" href="{{instance.video}}" target="_blank">View Video</a>
+                    <p ng-if="tiles.type === 'job'" class="tile-info">{{instance.role}}</p>
+                    <p class="tile-info">{{instance.dates}}</p>
                 </div>
             </div>
             <div class="logo">

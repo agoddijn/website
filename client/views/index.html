@@ -31,12 +31,10 @@
     <script type="text/javascript" src="/additional/prettify/google-code-prettify/prettify.js"></script>
     <script type="text/javascript" src="/additional/preload/angular-preload-image.min.js"></script>
     <script type="text/javascript" src="../js/services/about-service.js"></script>
-    <script type="text/javascript" src="../js/services/login-service.js"></script>
     <script type="text/javascript" src="../js/controllers/main-controller.js"></script>
     <script type="text/javascript" src="../js/routes.js"></script>
     <script type="text/javascript" src="../js/controllers/highlight-controller.js"></script>
     <script type="text/javascript" src="../js/controllers/about-controller.js"></script>
-    <script type="text/javascript" src="../js/controllers/login-controller.js"></script>
     <script type="text/javascript" src="../js/services/blog-service.js"></script>
     <script type="text/javascript" src="../js/controllers/blog-controller.js"></script>
     <script type="text/javascript" src="../js/services/data-service.js"></script>
@@ -135,7 +133,7 @@
         <div class="div profile-bottom">
             
             <div class="highlights" ng-controller="HighlightController as highlights">
-                <div class="tile highlight-tile" ng-repeat="instance in highlights.highlights | orderBy: 'name'">
+                <div class="tile highlight-tile" ng-repeat="instance in highlights.highlights track by $index | orderBy: 'name'">
                     <div ng-click="highlights.open(instance)" class="tile-inner">
                         <div class="cover">
                             <div class="cover-content" ng-style="{ top: (instance.github != null || instance.video != null) ? '25%' : '45%'}">

@@ -195,6 +195,7 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 /* ---------- */
 
 .tile {
+    
     padding: 20px 2vw;
     height: 250px;
 }
@@ -252,6 +253,10 @@ textarea:focus, input:focus, button:focus, i:focus, i:active {
 .descriptionShort {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.tile-info {
+    margin-top: 5px;
 }
 
 .tile-link {

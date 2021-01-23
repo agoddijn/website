@@ -10,6 +10,7 @@ module.exports =  {
     icon: "/images/logos/HALP.png",
     descriptionShort: "Robot designed and built from scratch for a competition",
     video: "http://player.vimeo.com/video/145592816",
+    dates: "Jul 2015 - Aug 2015",
     sections: [
         {
             header: "Introduction",
