@@ -27,18 +27,6 @@ angular.module('routes', ['ngRoute'])
       controllerAs : 'about'
     })
 
-    .when('/register', {
-      templateUrl : 'views/pages/register.html',
-      controller : 'LoginController',
-      controllerAs : 'register'
-    })
-
-    .when('/login', {
-      templateUrl : 'views/pages/login.html',
-      controller : 'LoginController',
-      controllerAs : 'login'
-    })
-
     .when('/resume', {
       templateUrl : 'views/pages/resume.html',
       controller : 'ResumeController',

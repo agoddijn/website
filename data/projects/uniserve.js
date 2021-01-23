@@ -10,6 +10,7 @@ module.exports = {
     icon: "/images/logos/uniserve.png",
     descriptionShort: "Custom web app created for customer Uniserve",
     github: "https://github.com/agoddijn/uniserveProject",
+    dates: "Jan 2018 - Apr 2018",
     sections: [
         {
             header: "Introduction",

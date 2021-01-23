@@ -4,24 +4,11 @@ var bodyParser = require('body-parser');
 var app       = express();
 var morgan    = require('morgan');
 var config    = require('./config.js');
-// var mongoose  = require('mongoose');
 var path      = require('path');
-var mandrill  = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill(config.mandrillApi);
 var favicon = require('serve-favicon');
-var fs = require('fs');
 
 // Set up morgan to log HTTP requests
 app.use(morgan('dev'));
-
-// Set up mongo database
-// mongoose.connect(config.database, function(error){
-//   if (error) {
-//     console.error("Could not connect to mongo database");
-//     console.error(error);
-//   }
-//   else console.log('mongo connected');
-// });
 
 // Parse body
 app.use(bodyParser.json());
@@ -39,38 +26,47 @@ app.use('/code', express.static(path.resolve('./data/code')));
 app.use('/cv', express.static(path.resolve('./data/resume/resume.pdf')));
 
 // Default Routes
-app.get('/', function (req, res) {
+app.get('/api/jobs', function(req, res) {
+    var jobNames = ["autonomos", "n26", "routific", "tomtom"]
+    var jobs = []
+    jobNames.forEach(job => {
+        jobs.push(require(path.resolve('./data/jobs/' + job + '.js')))
+    })
+    jobs.forEach(job => {
+        var endDateString = job.dates.split("-")[1].trim();
+        var endDate = Date.parse(endDateString);
+        job.endDate = endDate;
+    })
+    jobs.sort((a, b) => b.endDate - a.endDate);
+    res.send(jobs)
+})
+app.get('/api/projects', function(req, res) {
+    var projectNames = ["halp", "website", "ubcInsight", "uniserve", "youtube", "morseToSpeech",  "zenflow"]
+    var projects = []
+    projectNames.forEach(project => {
+        projects.push(require(path.resolve('./data/projects/' + project + '.js')))
+    })
+    projects.forEach(project => {
+        var endDateString = project.dates.split("-")[1].trim();
+        var endDate = Date.parse(endDateString);
+        project.endDate = endDate;
+    })
+    projects.sort((a, b) => b.endDate - a.endDate);
+    res.send(projects)
+})
+app.get('/api/blogs', function(req, res) {
+    var blogNames = ["automotive", "ai", "donotdisturb"]
+    var blogs = []
+    blogNames.forEach(blog => {
+        blogs.push(require(path.resolve('./data/blogs/' + blog + '.js')))
+    })
+    blogs.sort((a, b) => b.date - a.date);
+    res.send(blogs)
+})
+
+app.get('/*', function (req, res) {
     res.sendfile(path.resolve('./client/views/index.html'));
 });
-app.get('/:name', function (req, res) {
-    res.sendfile(path.resolve('./client/views/index.html'));
-});
-app.get('/job/:name', function(req, res) {
-    var name = req.params.name;
-    var toSend = require(path.resolve('./data/jobs/' + name + '.js'));
-    res.send(toSend);
-});
-app.get('/project/:name', function(req, res) {
-    var name = req.params.name;
-    var toSend = require(path.resolve('./data/projects/' + name + '.js'));
-    res.send(toSend);
-});
-app.get('/blog/:name', function(req, res) {
-    var name = req.params.name;
-    var toSend = require(path.resolve('./data/blogs/' + name + '.js'));
-    res.send(toSend);
-});
-
-//Log requests
-app.use(function (req, res, next) {
-    console.log(req.method, req.url);
-    next();
-});
-
-//Routes
-app.post('/sendMail', require(__dirname + '/routes/sendMail.js'));
-app.post('/login', require(__dirname + '/routes/login.js'));
-app.post('/register', require(__dirname + '/routes/register.js'));
 
 //Start server
 app.listen(config.port, function() {

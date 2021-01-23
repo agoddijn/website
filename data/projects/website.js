@@ -5,6 +5,7 @@ module.exports = {
     icon: "/images/logos/website-brand.png",
     github: "https://github.com/agoddijn/website",
     descriptionShort: "Portfolio website designed from scratch using MEAN stack technology",
+    dates: "Oct 2015 - Jan 2021",
     sections: [
       {
         header: "Introduction",

@@ -3,6 +3,8 @@ var path = "/images/jobs/n26/";
 module.exports = {
     name: "N26",
     icon: "/images/logos/n26.png",
+    role: "Backend Software Engineer & Product Manager",
+    dates: "Jun 2018 - Jan 2020",
     positions: [
         {
             name: "Product Manager",

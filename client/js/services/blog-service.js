@@ -1,25 +1,17 @@
 app.factory('BlogData', ['$http', '$q', function($http, $q) {
 
   var svc = {
-    names: ["automotive", "ai", "donotdisturb"], //File names without .js
     blogs: [],
     getBlogs: getBlogs
   }
 
-  var length = svc.names.length;
-
   function getBlogs() {
-    if (length == svc.blogs.length) return;
-    for (var i = 0; i < length; i++){
-      var url = "/blog/" + svc.names[i];
-      $http.get(url).then(function(res){
-        if (res.data) {
-          svc.blogs.push(res.data);
-        } else {
-          console.log("Couldn't get blog");
-        }
+    if (svc.blogs.length > 0) return;
+      $http.get('/api/blogs').then(response => {
+          response.data.forEach(blog => {
+            svc.blogs.push(blog);
+          })
       })
-    }
   }
 
   return svc;

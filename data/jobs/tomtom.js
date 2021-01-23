@@ -7,6 +7,8 @@ var kmeans = require(codePath + "kmeans.js");
 module.exports = {
     name: "TomTom",
     icon: "/images/logos/TomTom.png",
+    role: "Software Engineer & Product Manager",
+    dates: "May 2013 - Sep 2013",
     positions: [
         {
             name: "Software Engineer",

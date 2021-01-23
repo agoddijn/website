@@ -12,6 +12,7 @@ module.exports = {
   icon: "/images/logos/ubcInsightLogo.png",
   github: "https://github.com/agoddijn/cs310Project",
   descriptionShort: "Node web app for database interaction, both front and back end",
+  dates: "Jan 2017 - Apr 2017",
   sections: [
     {
       header: "Introduction",

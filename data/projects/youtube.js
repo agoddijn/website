@@ -3,6 +3,7 @@ module.exports = {
     icon: "/images/logos/YouTube.png",
     video: "https://www.youtube.com/channel/UCU6lCeBsZp-aWJ6_ymRncBw",
     descriptionShort: "A YouTube channel on which I have posted tutorial videos",
+    dates: "Nov 2010 - Feb 2011",
     sections: [
       {
         header: "World of Warcraft Servers",

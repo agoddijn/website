@@ -11,6 +11,7 @@ module.exports = {
     icon: "/images/logos/morseToSpeechlogo.png",
     github: "https://github.com/agoddijn/morseToSpeech",
     descriptionShort: "A microprocessor application to convert Morse code to speech",
+    dates: "Jan 2017 - Apr 2017",
     sections: [
         {
             header: "Introduction",

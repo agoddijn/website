@@ -6,31 +6,27 @@ app.controller('HighlightController', ['$http', '$uibModal', '$scope', function(
 
     var vm = this;
 
-    var highlightJobs = ['autonomos'];
-    var highlightProjects = ['halp'];
+    var highlightJobs = ['Autonomos'];
+    var highlightProjects = ['H.A.L.P'];
 
 
     vm.highlights = [];
 
-    for (var i = 0; i < highlightJobs.length; i++) {
-        $http.get('/job/' + highlightJobs[i]).then(function(res){
-            if (res.data) {
-                vm.highlights.push(res.data);
-            } else {
-                console.log("Couldn't get data");
+    $http.get('/api/jobs').then(response => {
+        response.data.forEach(job => {
+            if (highlightJobs.includes(job.name)) {
+                vm.highlights.push(job)
             }
         })
-    }
+    })
 
-    for (var i = 0; i < highlightProjects.length; i++) {
-        $http.get('/project/' + highlightProjects[i]).then(function(res){
-            if (res.data) {
-                vm.highlights.push(res.data);
-            } else {
-                console.log("Couldn't get data");
+    $http.get('/api/projects').then(response => {
+        response.data.forEach(project => {
+            if (highlightProjects.includes(project.name)) {
+                vm.highlights.push(project)
             }
         })
-    }
+    })
 
     vm.open = function(instance) {
         console.log("Opening");
