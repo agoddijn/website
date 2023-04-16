@@ -27,15 +27,18 @@ app.use('/cv', express.static(path.resolve('./data/resume/resume.pdf')));
 
 // Default Routes
 app.get('/api/jobs', function(req, res) {
-    var jobNames = ["autonomos", "n26", "routific", "tomtom"]
+    var jobNames = ["autonomos", "n26", "routific", "tomtom", "palantir"]
     var jobs = []
     jobNames.forEach(job => {
         jobs.push(require(path.resolve('./data/jobs/' + job + '.js')))
     })
     jobs.forEach(job => {
         var endDateString = job.dates.split("-")[1].trim();
-        var endDate = Date.parse(endDateString);
-        job.endDate = endDate;
+        if (endDateString == "Present") {
+            job.endDate = Date.now();
+        } else {
+            job.endDate =  Date.parse(endDateString);
+        }
     })
     jobs.sort((a, b) => b.endDate - a.endDate);
     res.send(jobs)
